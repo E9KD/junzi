@@ -1,0 +1,232 @@
+body {
+    background-color: #f5f5f4;
+}
+
+.footer {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer_item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer_item p {
+    font-size: 12px;
+    color: #6d6d6d;
+    margin-top: 3px;
+}
+.footer_item img {
+    width: 8vw;
+    height: 8vw;
+}
+
+/* 内容 */
+
+header {
+    width: 100vw;
+
+    background: linear-gradient(to bottom, #0683bc, #aae0f9);
+}
+.headerbox {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 94%;
+    margin: 0 auto;
+    padding-top: 10vw;
+    padding-bottom: 15vw;
+    height: 25vw;
+}
+.avaturbox {
+    width: 13vw;
+    height: 13vw;
+    background-color: #fff;
+    border-radius: 100%;
+    position: relative;
+    /* background: url("../image/Avatur.png") center no-repeat; */
+}
+.avatur {
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.personinfo {
+    margin-left: 1rem;
+    width: 80%;
+    height: 100%;
+}
+.top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.info_name {
+    color: #fff;
+    font-size: 13px;
+}
+.info_set {
+    width: 15px;
+}
+.mid {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5px;
+}
+.mid img {
+    width: 12px;
+}
+.mid p {
+    font-size: 12px;
+    color: #fff;
+    margin-left: 5px;
+}
+.bom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 12px;
+}
+.love {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+}
+.love img {
+    width: 12px;
+}
+.love_fp {
+    margin-left: 5px;
+}
+.gold {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    margin-left: 5px;
+}
+.gold img {
+    width: 12px;
+}
+/* 核心功能 */
+
+.carrycontent {
+    width: 94%;
+    position: absolute;
+    top: 40vw;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.order {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.order_title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e5e5;
+    width: 92%;
+    padding: 5px 4%;
+}
+.order_title_moreorder {
+    color: #888888;
+    font-size: 12px;
+}
+.order_content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0px;
+}
+.order_content_box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.order_content_box img {
+    width: 8vw;
+    height: 8vw;
+}
+.order_content_box p {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #666666;
+}
+.app {
+    margin-top: 1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 100%;
+}
+.app_title {
+    border-bottom: 1px solid #e5e5e5;
+    width: 92%;
+    padding: 5px 4%;
+}
+.app_content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5vw;
+}
+.app_content_row {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 5vw;
+}
+.app_content_row_box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.app_content_row_box img {
+    width: 8vw;
+    height: 8vw;
+}
+.app_content_row_box p {
+    font-size: 12px;
+    margin-top: 2vw;
+    color: #666666;
+}

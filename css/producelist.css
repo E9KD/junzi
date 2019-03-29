@@ -1,0 +1,126 @@
+body {
+    background-color: #f5f5f4;
+}
+
+.footer {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer_item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer_item p {
+    font-size: 12px;
+    color: #6d6d6d;
+    margin-top: 3px;
+}
+.footer_item img {
+    width: 8vw;
+    height: 8vw;
+}
+
+/* 正文 */
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 11vh;
+}
+.input {
+    width: 86%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    margin-top: 5vw;
+}
+.input img {
+    width: 4vw;
+    height: 4vw;
+    display: inline-block;
+}
+.input p {
+    color: #858585;
+    margin-left: 5px;
+    display: inline-block;
+}
+.content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 97%;
+    margin-top: 5vw;
+}
+.content_bar {
+    width: 32%;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.content_bar_item {
+    color: #858585;
+    font-size: 12px;
+    width: 90%;
+    text-align: center;
+    padding: 10px 5%;
+    position: relative;
+}
+.content_bar_item img {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translate(0px, -50%);
+    display: none;
+}
+.hover {
+    background-color: #eeeeee;
+}
+.content_list_box {
+    width: 65%;
+    margin-left: 3%;
+    background-color: #fff;
+    max-height: 75vh;
+    overflow: auto;
+}
+.content_list {
+    display: none;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.content_list_item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin: 10px 0px 10px 3%;
+}
+.content_list_item img {
+    width: 30px;
+    height: 30px;
+}
+.content_list_item p {
+    margin-top: 5px;
+    color: #858585;
+    font-size: 12px;
+}
