@@ -263,16 +263,51 @@
         <script src="./utils.js"></script>
         <script>
             window.onload = function() {
-                // 定义
-                function InitBorderBottom() {
-                    document
-                        .querySelectorAll(".header_list_option")[0]
-                        .classList.add("borderbom");
-                    document.querySelectorAll("section")[0].style.display =
-                        "block";
+                // 创建当前位置session
+                function IndexState() {
+                    if (sessionStorage.getItem("IndexState")) {
+                        let tag = JSON.parse(
+                            sessionStorage.getItem("IndexState")
+                        ).local;
+                        switch (tag) {
+                            case 0:
+                                ChangeBorderBottom(0);
+                                break;
+                            case 1:
+                                ChangeBorderBottom(1);
+                                break;
+                            case 2:
+                                ChangeBorderBottom(2);
+                                break;
+                            case 3:
+                                ChangeBorderBottom(3);
+                                break;
+                        }
+                    } else {
+                        let r = {
+                            local: 0
+                        };
+                        sessionStorage.setItem("IndexState", JSON.stringify(r));
+                    }
                 }
 
-                // 切换事件
+                // 修改首页当前位置
+                function ChangeIndexState(x) {
+                    let tag = JSON.parse(sessionStorage.getItem("IndexState"));
+                    tag.local = x;
+                    sessionStorage.setItem("IndexState", JSON.stringify(tag));
+                }
+
+                // 定义
+                // function InitBorderBottom() {
+                //     document
+                //         .querySelectorAll(".header_list_option")[0]
+                //         .classList.add("borderbom");
+                //     document.querySelectorAll("section")[0].style.display =
+                //         "block";
+                // }
+
+                // 切换bar事件
                 function ChangeBorderBottom(x) {
                     let tagArr = document.querySelectorAll(
                         ".header_list_option"
@@ -284,24 +319,49 @@
                     }
                     tagArr[x].classList.add("borderbom");
                     tagSection[x].style.display = "block";
+                    ChangeIndexState(x);
                 }
 
-                // 切换挂载
+                // 定位&&跳转当前位置
+                function JumbLocal() {
+                    ChangeBorderBottom(
+                        JSON.parse(sessionStorage.getItem("IndexState")).local
+                    );
+                }
+
+                // 默认&&挂载
                 function Init() {
+                    // 创建or读取session
+                    IndexState();
+
+                    // 切换挂载事件
                     let tagArr = document.querySelectorAll(
                         ".header_list_option"
                     );
-
                     for (let i = 0; i < tagArr.length; i++) {
                         tagArr[i].addEventListener("click", function() {
                             ChangeBorderBottom(i);
                         });
                     }
+
+                    // 活动跳转挂载事件
+                    let activityArr = document.querySelectorAll(
+                        ".section_party_box_content"
+                    );
+                    for (let i = 0; i < activityArr.length; i++) {
+                        activityArr[i].addEventListener("click", function() {
+                            ActivityJumb(i);
+                        });
+                    }
+                }
+
+                // 活动跳转
+                function ActivityJumb() {
+                    window.location.href = "./activity.html";
                 }
 
                 // 执行
                 Init();
-                InitBorderBottom();
             };
         </script>
     </body>

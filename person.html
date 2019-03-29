@@ -83,7 +83,6 @@
                         <div class="app_content_row_box">
                             <img src="./image/Promote.png" alt="" />
                             <p>爱心推广</p>
-                            <p>爱心推广</p>
                         </div>
                     </div>
                     <div class="app_content_row">
@@ -142,5 +141,58 @@
             </div>
         </footer>
         <script src="./utils.js"></script>
+        <script>
+            // 应用事件挂载
+            function AppMount() {
+                let tagArr = document.querySelectorAll(".app_content_row_box");
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].addEventListener("click", function() {
+                        AppJumb(i);
+                    });
+                }
+            }
+
+            // 应用跳转
+            function AppJumb(x) {
+                switch (x) {
+                    case 0:
+                        window.location.href = "./";
+                        break;
+                    case 1:
+                        window.location.href = "./";
+                        break;
+                    case 2:
+                        window.location.href = "./";
+                        break;
+                    case 3:
+                        window.location.href = "./";
+                        break;
+                    case 4:
+                        window.location.href = "./";
+                        break;
+                    case 5:
+                        window.location.href = "./shopaddress.html";
+                        break;
+                    case 6:
+                        window.location.href = "./";
+                        break;
+                    case 7:
+                        window.location.href = "./";
+                        break;
+                    case 8:
+                        window.location.href = "./";
+                        break;
+                }
+            }
+
+            // Init
+            function Init() {
+                // 我的应用事件挂载
+                AppMount()
+            }
+
+            // 执行
+            Init();
+        </script>
     </body>
 </html>

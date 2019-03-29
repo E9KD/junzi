@@ -1,7 +1,9 @@
 body {
     background-color: #f5f5f4;
 }
-
+::-webkit-scrollbar {
+    width: 0px;
+}
 .footer {
     width: 100vw;
     height: 10vh;
