@@ -115,6 +115,7 @@
                     </div>
                 </div>
             </div>
+            <div class="a"></div>
         </div>
 
         <!-- 脚步 -->
@@ -147,13 +148,13 @@
                 let tagArr = document.querySelectorAll(".app_content_row_box");
                 for (let i = 0; i < tagArr.length; i++) {
                     tagArr[i].addEventListener("click", function() {
-                        AppJumb(i);
+                        AppJump(i);
                     });
                 }
             }
 
             // 应用跳转
-            function AppJumb(x) {
+            function AppJump(x) {
                 switch (x) {
                     case 0:
                         window.location.href = "./";

@@ -288,6 +288,7 @@
                             local: 0
                         };
                         sessionStorage.setItem("IndexState", JSON.stringify(r));
+                        ChangeBorderBottom(0);
                     }
                 }
 
@@ -298,14 +299,6 @@
                     sessionStorage.setItem("IndexState", JSON.stringify(tag));
                 }
 
-                // 定义
-                // function InitBorderBottom() {
-                //     document
-                //         .querySelectorAll(".header_list_option")[0]
-                //         .classList.add("borderbom");
-                //     document.querySelectorAll("section")[0].style.display =
-                //         "block";
-                // }
 
                 // 切换bar事件
                 function ChangeBorderBottom(x) {
@@ -323,7 +316,7 @@
                 }
 
                 // 定位&&跳转当前位置
-                function JumbLocal() {
+                function JumpLocal() {
                     ChangeBorderBottom(
                         JSON.parse(sessionStorage.getItem("IndexState")).local
                     );
@@ -350,13 +343,13 @@
                     );
                     for (let i = 0; i < activityArr.length; i++) {
                         activityArr[i].addEventListener("click", function() {
-                            ActivityJumb(i);
+                            ActivityJump(i);
                         });
                     }
                 }
 
                 // 活动跳转
-                function ActivityJumb() {
+                function ActivityJump() {
                     window.location.href = "./activity.html";
                 }
 

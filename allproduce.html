@@ -116,6 +116,26 @@
                 <p>个人中心</p>
             </div>
         </footer>
+        <script>
+            // 商品点击
+            function ProduceJump() {
+                // 这里根据情况可以重写
+                let tagArr = document.querySelectorAll(".content");
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].addEventListener("click", function() {
+                        window.location.href = "./produce.html";
+                    });
+                }
+            }
+
+            // Init
+            function Init() {
+                ProduceJump();
+            }
+
+            // 执行
+            Init();
+        </script>
         <script src="./utils.js"></script>
     </body>
 </html>

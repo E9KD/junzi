@@ -13,6 +13,11 @@
         />
     </head>
     <body>
+        <!-- header -->
+        <header>
+            <img src="./image/GoBack.png" alt="" class="back" id="back" />
+            <img src="./image/ShareBlack.png" alt="" class="share" />
+        </header>
         <!-- 轮播 -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -118,9 +123,18 @@
         </footer>
         <!-- Popup -->
         <div class="popup" id="popup">
-                <p class="makesure" id="makesure">确定</p>
+            <p class="makesure" id="makesure">确定</p>
         </div>
         <script>
+            // 返回全部商品页
+            function BackAllProduce() {
+                document
+                    .getElementById("back")
+                    .addEventListener("click", function() {
+                        window.location.href = "./allproduce.html";
+                    });
+            }
+
             // 添加商品图片
             function AddImage() {
                 // 在这里命名一个数组，内容是获取到的图片
@@ -160,7 +174,8 @@
                     .getElementById("makesure")
                     .addEventListener("click", function() {
                         document.getElementById("popup").style.height = "0px";
-                        document.getElementById("makesure").style.display = "none";
+                        document.getElementById("makesure").style.display =
+                            "none";
                     });
             }
             // Init
@@ -171,6 +186,8 @@
                 PopupEvent();
                 // 弹出层关闭挂载
                 ClosePopup();
+                //返回按钮
+                BackAllProduce()
             }
 
             // 执行

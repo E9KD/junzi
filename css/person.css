@@ -142,6 +142,7 @@ header {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 10rem;
 }
 .order {
     display: flex;
@@ -229,4 +230,8 @@ header {
     font-size: 12px;
     margin-top: 2vw;
     color: #666666;
+}
+.a{
+    background-color: #f5f5f4;
+    height: 12vh;
 }

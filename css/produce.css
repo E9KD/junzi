@@ -4,6 +4,31 @@ body {
 ::-webkit-scrollbar {
     width: 0px;
 }
+/* header */
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 94%;
+    z-index: 88;
+    
+}
+header img {
+     padding: 10px;
+}
+.back {
+    width: 0.7rem;
+}
+.share {
+    width: 1.3rem;
+}
+
 /* Footer */
 footer {
     display: flex;
@@ -224,7 +249,8 @@ footer {
     color: #fff;
     background-color: #ff5001;
     text-align: center;
-    line-height: 30px;
+    line-height: 5vh;
     border-radius: 1rem;
     display: none;
+    height: 5vh;
 }
