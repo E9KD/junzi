@@ -65,8 +65,9 @@ section {
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 70vw;
+    width: 68vw;
     padding: 15px 2%;
+    margin-left: 2vw;
 }
 .item_content_person p {
     display: inline-block;

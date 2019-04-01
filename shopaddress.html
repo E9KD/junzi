@@ -13,7 +13,7 @@
             <div class="headerbox">
                 <img src="./image/GoBack.png" alt="" id="back" />
                 <p class="title">我的收获地址</p>
-                <p class="save">添加收货地址</p>
+                <p class="save" id="save">添加收货地址</p>
             </div>
         </header>
 
@@ -78,9 +78,21 @@
                 });
         }
 
+        //添加收货地址
+        function AddAddress() {
+            document
+                .getElementById("save")
+                .addEventListener("click", function() {
+                    window.location.href = "./addaddress.html";
+                });
+        }
+
         // Init
         function Init() {
+            // 返回
             Goback();
+            // 添加地址
+            AddAddress();
         }
 
         // 执行
