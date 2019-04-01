@@ -32,7 +32,8 @@
         <div class="options">
             <div class="content_title">
                 <p class="content_title_header">
-                    节日礼物 幼儿园 手工制作 纽扣花束 儿童创意益智玩具儿童创意益智玩具儿童创意益智玩具儿童创意益智玩具儿童创意益智玩具
+                    节日礼物 幼儿园 手工制作 纽扣花束
+                    儿童创意益智玩具儿童创意益智玩具儿童创意益智玩具儿童创意益智玩具儿童创意益智玩具
                 </p>
                 <img class="content_title_share" src="./image/ShareBlack.png" />
             </div>
@@ -53,13 +54,128 @@
                 <div class="content_options_box">
                     <div class="content_options_left">
                         <p>服务：</p>
-                        <p>服务：不支持7天无理由退换货 · 破损补寄</p>
+                        <p>不支持7天无理由退换货 · 破损补寄</p>
+                    </div>
+                    <img src="./image/PrevIcon.png" alt="" />
+                </div>
+                <div class="content_options_box">
+                    <div class="content_options_left">
+                        <p>规格：</p>
+                        <p>请选择</p>
+                    </div>
+                    <img src="./image/PrevIcon.png" alt="" />
+                </div>
+                <div class="content_options_box">
+                    <div class="content_options_left">
+                        <p>来源：</p>
+                        <p>河北留守儿童制作</p>
                     </div>
                     <img src="./image/PrevIcon.png" alt="" />
                 </div>
             </div>
+            <div class="content_evaluate">
+                <div class="content_evaluate_title">
+                    <div class="content_evaluate_title_left">
+                        <p>评价</p>
+                        <p>(</p>
+                        <p>2333</p>
+                        <p>)</p>
+                    </div>
+                    <div class="content_evaluate_title_right">
+                        <p>查看全部</p>
+                        <img src="./image/PrevIcon.png" alt="" />
+                    </div>
+                </div>
+                <div class="content_evaluate_content">
+                    <div class="content_evaluate_content_user">
+                        <img src="./image/Avatar.png" alt="" />
+                        <p>用户名称</p>
+                    </div>
+                    <p class="evaluate">很好看，特别棒，好评！！</p>
+                </div>
+            </div>
+            <div class="content_list" id="produceImage"></div>
+            <p class="bottomline">——————已经到底线了——————</p>
         </div>
+        <!-- Footer -->
+        <footer>
+            <div class="footer_icon">
+                <div class="icon_item">
+                    <img src="./image/CustomerService.png" alt="" />
+                    <p>客服</p>
+                </div>
+                <div class="icon_item">
+                    <img src="./image/Home.png" alt="" />
+                    <p>首页</p>
+                </div>
+                <div class="icon_item">
+                    <img src="./image/HeartNormal.png" alt="" />
+                    <p>收藏</p>
+                </div>
+            </div>
+            <div class="shopcar">加入购物车</div>
+            <div class="buynow">立即购买</div>
+        </footer>
+        <!-- Popup -->
+        <div class="popup" id="popup">
+                <p class="makesure" id="makesure">确定</p>
+        </div>
+        <script>
+            // 添加商品图片
+            function AddImage() {
+                // 在这里命名一个数组，内容是获取到的图片
+                let tagArr = [
+                    "./image/ProduceList1.png",
+                    "./image/ProduceList2.png",
+                    "./image/ProduceList3.png",
+                    "./image/ProduceList4.png"
+                ];
+                // 循环添加
+                for (let i = 0; i < tagArr.length; i++) {
+                    let img = new Image();
+                    img.src = tagArr[i];
+                    img.style.width = "100%";
+                    document.getElementById("produceImage").appendChild(img);
+                }
+            }
 
+            // 弹出层挂载
+            function PopupEvent() {
+                let tagArr = document.querySelectorAll(".content_options_box");
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].addEventListener("click", function() {
+                        PopupChange(i);
+                    });
+                }
+            }
+            // 弹出层变化
+            function PopupChange(e) {
+                document.getElementById("popup").style.height = "90vh";
+                document.getElementById("makesure").style.display = "block";
+            }
+
+            // 弹出层关闭
+            function ClosePopup() {
+                document
+                    .getElementById("makesure")
+                    .addEventListener("click", function() {
+                        document.getElementById("popup").style.height = "0px";
+                        document.getElementById("makesure").style.display = "none";
+                    });
+            }
+            // Init
+            function Init() {
+                // 添加图片
+                AddImage();
+                // 弹出层事件挂载
+                PopupEvent();
+                // 弹出层关闭挂载
+                ClosePopup();
+            }
+
+            // 执行
+            Init();
+        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
         <script>
             let mySwiper = new Swiper(".swiper-container", {
