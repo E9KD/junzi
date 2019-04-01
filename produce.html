@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/produce.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css"
+        />
+    </head>
+    <body>
+        <!-- 轮播 -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./image/ProduceImage.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/ProduceImage.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/ProduceImage.png" alt="" />
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- Options -->
+        <div class="options">
+            <div class="content_title">
+                <p class="content_title_header">
+                    节日礼物 幼儿园 手工制作 纽扣花束 儿童创意益智玩具儿童创意益智玩具儿童创意益智玩具儿童创意益智玩具儿童创意益智玩具
+                </p>
+                <img class="content_title_share" src="./image/ShareBlack.png" />
+            </div>
+            <p class="content_tip">温暖公益 关爱留守儿童 现发货 毁坏包赔</p>
+            <div class="content_price">
+                <div class="content_price_pirce">
+                    <p>¥</p>
+                    <p>15.80</p>
+                </div>
+                <div class="content_price_sales">
+                    <p>月销量：</p>
+                    <p>554263</p>
+                    <p>件</p>
+                </div>
+                <div class="content_price_address">上海崇明</div>
+            </div>
+            <div class="content_options">
+                <div class="content_options_box">
+                    <div class="content_options_left">
+                        <p>服务：</p>
+                        <p>服务：不支持7天无理由退换货 · 破损补寄</p>
+                    </div>
+                    <img src="./image/PrevIcon.png" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+        <script>
+            let mySwiper = new Swiper(".swiper-container", {
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: true
+                },
+                pagination: {
+                    el: ".swiper-pagination"
+                }
+            });
+        </script>
+    </body>
+</html>
