@@ -19,13 +19,14 @@ header {
     height: 100%;
     position: relative;
 }
-.title {
+.titlea {
     font-size: 14px;
     color: #666666;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin: 0;
 }
 .save {
     color: #fe8921;
@@ -60,4 +61,14 @@ header {
     border: none;
     margin-left: 1rem;
     width: 60%;
+}
+.box {
+    padding: 0px 10px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    font-size: 13px;
 }

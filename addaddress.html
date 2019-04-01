@@ -16,7 +16,7 @@
         <header>
             <div class="headerbox">
                 <img src="./image/GoBack.png" alt="" id="back" />
-                <p class="title">添加收货地址</p>
+                <p class="titlea">添加收货地址</p>
                 <p class="save" id="save">保存</p>
             </div>
         </header>
@@ -48,12 +48,15 @@
                     <div class="item-media">
                         <i class="icon icon-form-toggle"></i>
                     </div>
-                    <div class="item-inner">
+                    <div class="item-inner box">
                         <div class="item-title label">设为默认地址</div>
                         <div class="item-input">
                             <label class="label-switch">
                                 <input type="checkbox" id="input" />
-                                <div class="checkbox"></div>
+                                <div
+                                    class="checkbox"
+                                    style="transform: scale(0.7);"
+                                ></div>
                             </label>
                         </div>
                     </div>
@@ -63,7 +66,11 @@
     </body>
     <script>
         document.getElementById("input").addEventListener("click", function(e) {
-            console.log(e.target.checked);
+            // 是否默认地址的状态
+            console.log(e.target.checked); //true OR flase
+        });
+        document.getElementById("back").addEventListener("click", function() {
+            window.location.href = "./shopaddress.html";
         });
     </script>
 </html>
