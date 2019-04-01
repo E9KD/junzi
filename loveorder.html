@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/loveorder.css" />
+    </head>
+    <body>
+        <header>
+            <div class="headerbox">
+                <img src="./image/GoBack.png" alt="" id="back" />
+                <p class="titlea">爱心订单</p>
+            </div>
+        </header>
+
+        <!-- 选项卡 -->
+        <section class="options">
+            <div class="order">
+                <div class="order_title">
+                    <p>我的订单</p>
+                </div>
+                <div class="order_content">
+                    <div class="order_content_box">
+                        <img src="./image/AllProduce.png" alt="" />
+                        <p>全部订单</p>
+                    </div>
+                    <div class="order_content_box">
+                        <img src="./image/WaitPay.png" alt="" />
+                        <p>代付款</p>
+                    </div>
+                    <div class="order_content_box">
+                        <img src="./image/WaitDelivery.png" alt="" />
+                        <p>待发货</p>
+                    </div>
+                    <div class="order_content_box">
+                        <img src="./image/WaitGet.png" alt="" />
+                        <p>待收货</p>
+                    </div>
+                    <div class="order_content_box">
+                        <img src="./image/WaitEvaluation.png" alt="" />
+                        <p>待评价</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 全部订单 -->
+        <section class="content">
+            <div class="order_item">
+                <div class="order_item_title">
+                    <div class="order_item_title_left">
+                        <img
+                            src="./image/ShopIcon.png"
+                            alt=""
+                            class="order_item_title_left_logo"
+                        />
+                        <p>某某某专卖店</p>
+                        <img
+                            src="./image/PrevIcon.png"
+                            alt=""
+                            class="order_item_title_left_icon"
+                        />
+                    </div>
+                    <div class="order_item_title_right">
+                        <p style="transform: scale(0.8);">卖家已收货</p>
+                    </div>
+                </div>
+                <div class="order_item_content">
+                    <img src="./image/ShopImage.png" alt="" />
+                    <div class="order_item_content_right">
+                        <div class="order_item_content_right_top">
+                            <p
+                                style="color:#666666"
+                                class="order_item_content_right_top_title"
+                            >
+                                河北留守儿童制作
+                                墙壁手工挂件河北留守儿童制作河北留守儿童制作河北留守儿童制作河北留守儿童制作河北留守儿童制作
+                            </p>
+                            <div class="order_item_content_right_price">
+                                <p class="price_now">¥&nbsp;58.8</p>
+                                <p class="price_before">¥&nbsp;80</p>
+                            </div>
+                        </div>
+                        <div class="order_item_content_right_bom">
+                            <p class="order_item_content_right_bom_list">
+                                分类：手工挂件
+                            </p>
+                            <p class="order_item_content_right_bom_number">
+                                X1
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="order_item_more">
+                    <p class="order_item_more_more">更多</p>
+                    <p class="order_item_more_button wuliu">查看物流</p>
+                    <p class="order_item_more_button pingjia">评价</p>
+                </div>
+            </div>
+        </section>
+        <script>
+            // card挂载
+            function OptionsCard() {
+                let tagArr = document.querySelectorAll(".order_content_box");
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].addEventListener("click", function() {
+                        ChangeOptions(i);
+                    });
+                }
+            }
+
+            // 切换选项卡
+            function ChangeOptions(x) {
+                let tagArr = document.querySelectorAll(".order_content_box");
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].style.backgroundColor = "#fff";
+                }
+                tagArr[x].style.backgroundColor = "#eeeeee";
+            }
+
+            // 默认选项卡
+            function NormalOptionsCard() {
+                document.querySelectorAll(
+                    ".order_content_box"
+                )[0].style.backgroundColor = "#eee";
+            }
+
+            // Init
+            function Init() {
+                // 选项卡事件挂载
+                OptionsCard();
+                // 默认选项卡实现
+                NormalOptionsCard();
+            }
+
+            // 执行
+            Init();
+        </script>
+    </body>
+</html>
