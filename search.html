@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/search.css" />
+    </head>
+    <body>
+
+            <div class="box">
+                <input type="text" id="in" class="in" placeholder="搜索商品" />
+                <p id="p" class="p">取消</p>
+            </div>
+        <div class="content">
+            <div class="item">
+                米老鼠毛绒玩具
+            </div>
+            <div class="item">
+                米老鼠
+            </div>
+            <div class="item">
+                维尼小熊
+            </div>
+            <div class="item">
+                粉红豹
+            </div>
+            <div class="item">
+                熊公仔
+            </div>
+            <div class="item">
+                熊银匠旗舰店
+            </div>
+            <div class="item">
+                一字发卡横架 大号
+            </div>
+        </div>
+    </body>
+    <script>
+        // 其他的我就不写了，你们自由发挥吧
+        
+        document.getElementById("p").addEventListener("click", function() {
+            window.history.back(-1); 
+        });
+    </script>
+</html>

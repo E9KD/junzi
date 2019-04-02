@@ -10,7 +10,7 @@
     </head>
     <body>
         <section>
-            <div class="input">
+            <div class="input" id="search">
                 <img src="./image/ProduceRearch.png" alt="" />
                 <p>搜索店铺内的商品</p>
             </div>
@@ -128,9 +128,19 @@
                 }
             }
 
+            // 搜索页面
+            function SearchJump() {
+                document
+                    .getElementById("search")
+                    .addEventListener("click", function() {
+                        window.location.href = "./search.html";
+                    });
+            }
+
             // Init
             function Init() {
                 ProduceJump();
+                SearchJump();
             }
 
             // 执行

@@ -1,0 +1,83 @@
+body {
+    background-color: #f5f5f4;
+}
+header {
+    height: 8vh;
+    background-color: #3fa3d1;
+}
+.headerbox img {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0px, -50%);
+}
+.headerbox {
+    overflow: hidden;
+    width: 92%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.titlea {
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+.save {
+    color: #fe8921;
+    font-size: 12px;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    margin: 0;
+    display: none;
+}
+.address {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 3%;
+    background-color: #fff;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+.local {
+    width: 18px;
+    height: 20px; padding: 10px;
+}
+.more {
+    width: 5px;
+    height: 10px;
+    padding: 10px;
+}
+.localbox {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+}
+.user p {
+    display: inline-block;
+}
+.name {
+    font-size: 13px;
+}
+.phone {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #666666;
+}
+.user_local {
+    font-size: 12px;
+}

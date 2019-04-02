@@ -118,7 +118,7 @@
                     <p>收藏</p>
                 </div>
             </div>
-            <div class="shopcar">加入购物车</div>
+            <div class="shopcar" class="shopcar" id="shopcar">加入购物车</div>
             <div class="buynow">立即购买</div>
         </footer>
         <!-- Popup -->
@@ -178,6 +178,16 @@
                             "none";
                     });
             }
+
+            // shopcar跳转
+            function ShopCarJump() {
+                document
+                    .getElementById("shopcar")
+                    .addEventListener("click", function() {
+                        window.location.href = "./shopcar.html";
+                    });
+            }
+
             // Init
             function Init() {
                 // 添加图片
@@ -187,7 +197,9 @@
                 // 弹出层关闭挂载
                 ClosePopup();
                 //返回按钮
-                BackAllProduce()
+                BackAllProduce();
+                // shopcar
+                ShopCarJump()
             }
 
             // 执行

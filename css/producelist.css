@@ -59,6 +59,7 @@ section {
     color: #858585;
     margin-left: 5px;
     display: inline-block;
+    font-size: 12px;
 }
 .content {
     display: flex;

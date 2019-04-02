@@ -1,0 +1,43 @@
+body {
+    background-color: #f5f5f4;
+}
+.in {
+    width: 65vw;
+    display: inline-block;
+    transition: width 0.5s;
+    margin: 10px 5vw;
+    padding-left: 8vw;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+    background: url("../image/ProduceRearch.png") 5px center no-repeat;
+    background-size: 15px 15px;
+    background-color: #ffffff;
+}
+.p {
+    width: 10vw;
+    display: inline-block;
+}
+.box {
+    width: 100vw;
+    height: 8vh;
+}
+.content {
+    height: 92vh;
+    background-color: #ffffff;
+    
+    /* display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center; */
+}
+
+.item {
+    display: inline-block;
+    padding: 3px 15px;
+    color: #666666;
+    font-size: 12px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    margin: 5px 3px;
+}
