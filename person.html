@@ -45,7 +45,9 @@
             <div class="order">
                 <div class="order_title">
                     <p>我的订单</p>
-                    <p class="order_title_moreorder">查看全部订单</p>
+                    <p class="order_title_moreorder" id="allorder">
+                        查看全部订单
+                    </p>
                 </div>
                 <div class="order_content">
                     <div class="order_content_box">
@@ -152,6 +154,14 @@
                     });
                 }
             }
+            // 全部订单跳转
+            function AllOrderJump() {
+                document
+                    .getElementById("allorder")
+                    .addEventListener("click", function() {
+                        window.location.href = "./allorder.html";
+                    });
+            }
 
             // 应用跳转
             function AppJump(x) {
@@ -189,7 +199,9 @@
             // Init
             function Init() {
                 // 我的应用事件挂载
-                AppMount()
+                AppMount();
+                // 全部订单挂载
+                AllOrderJump();
             }
 
             // 执行
