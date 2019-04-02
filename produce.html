@@ -119,7 +119,7 @@
                 </div>
             </div>
             <div class="shopcar" class="shopcar" id="shopcar">加入购物车</div>
-            <div class="buynow">立即购买</div>
+            <div class="buynow" id="buynow">立即购买</div>
         </footer>
         <!-- Popup -->
         <div class="popup" id="popup">
@@ -188,6 +188,15 @@
                     });
             }
 
+            // 立刻购买
+            function BuyNowJump() {
+                document
+                    .getElementById("buynow")
+                    .addEventListener("click", function() {
+                        window.location.href = "./confirmationOrder.html";
+                    });
+            }
+
             // Init
             function Init() {
                 // 添加图片
@@ -199,7 +208,9 @@
                 //返回按钮
                 BackAllProduce();
                 // shopcar
-                ShopCarJump()
+                ShopCarJump();
+                //立刻购买
+                BuyNowJump()
             }
 
             // 执行
