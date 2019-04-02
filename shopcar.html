@@ -272,7 +272,7 @@
                 </div>
             </div>
             <div class="footer_pay">
-                <div class="pay_box">
+                <div class="pay_box" id="getpay">
                     <p>结算</p>
                     <p>(</p>
                     <p>1</p>
@@ -295,6 +295,10 @@
         });
         document.getElementById("back").addEventListener("click", function() {
             window.location.href = "./produce.html";
+        });
+        // 跳转订单确认页面
+        document.getElementById("getpay").addEventListener("click", function() {
+            window.location.href = "./confirmationOrder.html";
         });
     </script>
 </html>

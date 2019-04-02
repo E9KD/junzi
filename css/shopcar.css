@@ -73,7 +73,7 @@ footer {
     left: 0px;
     width: 100%;
     border-top: 1px solid #e5e5e5;
-    height: 10vh;
+    height: 8vh;
 }
 .footer_options {
     width: 76%;
@@ -109,16 +109,17 @@ footer {
     width: 30%;
     height: 100%;
     text-align: center;
-    line-height: 10vh;
+    line-height: 8vh;
     background: linear-gradient(to right, #ff6d00, #ffd100);
     color: #fff;
 }
 .pay_box p {
     display: inline-block;
+    font-size: 12px;
 }
 /* Section */
 section {
-    margin-bottom: 11vh;
+    margin-bottom: 10vh;
     margin-top: 20px;
 }
 
