@@ -192,5 +192,14 @@
             </div>
         </footer>
         <script src="./utils.js"></script>
+        <script>
+            // 跳转详情页
+            let tagArr = document.querySelectorAll(".item_title");
+            for (let i = 0; i < tagArr.length; i++) {
+                tagArr[i].addEventListener("click", function() {
+                    window.location.href = "./listdetails.html";
+                });
+            }
+        </script>
     </body>
 </html>
