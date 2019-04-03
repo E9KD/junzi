@@ -214,16 +214,17 @@ section {
     width: 100%;
     margin-bottom: 10px;
 }
-.order_item_more p {
-    margin-right: 10px;
+.order_item_more_left {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.order_item_more_left p {
+    color: #999999;
     font-size: 12px;
-    transform: scale(0.8);
 }
-.order_item_more_button {
-    border-radius: 10px;
-    border: 1px solid #b1b1b1;
-    padding: 3px 5px;
-}
-.pingjia {
-    color: #ff7800;
+.order_item_more_right {
+    margin-left: 10px;
+    font-size: 12px;
 }

@@ -1,6 +1,6 @@
 .imgwh {
-    width: 4vw;
-    height: 4vw;
+    width: 15px;
+    height: 15px;
 }
 .footer {
     width: 100vw;
@@ -212,7 +212,18 @@ section {
     margin-top: 20px;
     width: 49%;
 }
-.section_video_box_content img {
+.imgbox {
+    position: relative;
+}
+.playbtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+}
+.img {
     width: 100%;
 }
 .section_video_box_content p {

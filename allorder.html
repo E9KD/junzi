@@ -636,15 +636,21 @@
                     Change(i);
                 });
             }
-            
         }
 
         // 默认显示options
         function OptionsNormal() {
+            // 检测url，确定靶向
+            let id;
+            window.location.href.indexOf("?") == -1
+                ? (id = 0)
+                : (id =
+                      Number(window.location.href.split("?")[1].split("=")[1]) +
+                      1);
             document
-                .querySelectorAll(".options_item")[0]
-                .classList.add("checked");
-            document.querySelectorAll("section")[0].style.display = "block";
+                .querySelectorAll(".options_item")
+                [id].classList.add("checked");
+            document.querySelectorAll("section")[id].style.display = "block";
         }
 
         // Init

@@ -73,7 +73,7 @@ header {
 }
 .content_list {
     background-color: #ffffff;
-    margin-top: .4rem;
+    margin-top: 0.4rem;
 }
 .content_list_header {
     padding: 10px 3%;
@@ -109,18 +109,18 @@ header {
 }
 .content_item_left {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
 }
 .content_item_left .a {
-    font-size: 14px;
-    color: black;
+    width: 35px;
+    height: 35px;
 }
-.content_item_left .b{
+.content_item_left .b {
     font-size: 12px;
     color: #a7a7a7;
-    margin-top: 3px;
+    margin-left: 1rem;
 }
 .content_item_right {
     color: #0683bc;

@@ -25,12 +25,12 @@
                         <p>金牌会员</p>
                     </div>
                     <div class="bom">
-                        <div class="love">
+                        <div class="love" id="love">
                             <img src="./image/Heart.png" alt="" />
                             <p class="love_fp">爱心值：</p>
                             <p>666</p>
                         </div>
-                        <div class="gold">
+                        <div class="gold" id="gold">
                             <img src="./image/Money.png" alt="" />
                             <p class="love_fp">消费值：</p>
                             <p>2333</p>
@@ -163,11 +163,40 @@
                     });
             }
 
+            // 订单跳转
+            function OrderJump(x) {
+                console.log(x);
+                switch (x) {
+                    case 0:
+                        window.location.href = "./allorder.html?id=0";
+                        break;
+                    case 1:
+                        window.location.href = "./allorder.html?id=1";
+                        break;
+                    case 2:
+                        window.location.href = "./allorder.html?id=2";
+                        break;
+                    case 3:
+                        window.location.href = "./allorder.html?id=3";
+                        break;
+                }
+            }
+
+            // 订单挂载
+            function OrderMount() {
+                let tagArr = document.querySelectorAll(".order_content_box");
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].addEventListener("click", function() {
+                        OrderJump(i);
+                    });
+                }
+            }
+
             // 应用跳转
             function AppJump(x) {
                 switch (x) {
                     case 0:
-                        window.location.href = "./";
+                        window.location.href = "./loveteam.html";
                         break;
                     case 1:
                         window.location.href = "./loveorder.html";
@@ -196,12 +225,35 @@
                 }
             }
 
+            //爱心值跳转
+            function AXjump() {
+                document
+                    .getElementById("love")
+                    .addEventListener("click", function() {
+                        window.location.href = "./detail.html";
+                    });
+            }
+
+            //消费值跳转
+            function XFjump() {
+                document
+                    .getElementById("gold")
+                    .addEventListener("click", function() {
+                        window.location.href = "./detail.html";
+                    });
+            }
             // Init
             function Init() {
                 // 我的应用事件挂载
                 AppMount();
                 // 全部订单挂载
                 AllOrderJump();
+                //XFjump
+                XFjump();
+                //AXjump
+                AXjump();
+                // OrderJump
+                OrderMount();
             }
 
             // 执行
