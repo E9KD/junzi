@@ -294,7 +294,7 @@
                 : (tag.style.display = "none");
         });
         document.getElementById("back").addEventListener("click", function() {
-            window.location.href = "./produce.html";
+            window.history.go(-1)
         });
         // 跳转订单确认页面
         document.getElementById("getpay").addEventListener("click", function() {

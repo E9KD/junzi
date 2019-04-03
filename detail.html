@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/detail.css" />
+    </head>
+    <body>
+        <header>
+            <div class="headerbox">
+                <img src="./image/GoBack.png" alt="" id="back" />
+                <p class="titlea">爱心团队明细</p>
+            </div>
+        </header>
+
+        <div class="param">
+            <p class="name">爱心团队值</p>
+            <p class="num">88888</p>
+        </div>
+
+        <div class="content">
+            <div class="content_title">
+                <p>积分记录</p>
+                <select name="" id="">
+                    <option value="" class="options">本月</option>
+                    <option value="" class="options">本日</option>
+                    <option value="" class="options">今年</option>
+                </select>
+            </div>
+            <div class="content_list">
+                <div class="content_list_header">
+                    <div class="header_left">
+                        <img src="./image/RightArrow.png" alt="" />
+                        <p>本月</p>
+                    </div>
+                    <div class="header_right">
+                        <p>获取：</p>
+                        <p>5566</p>
+                    </div>
+                </div>
+                <div class="content_item">
+                    <div class="content_item_left">
+                        <p class="a">爱心积分</p>
+                        <p class="b">2019-01-02</p>
+                    </div>
+                    <p class="content_item_right">+5</p>
+                </div>
+                <div class="content_item">
+                    <div class="content_item_left">
+                        <p class="a">爱心积分</p>
+                        <p class="b">2019-01-02</p>
+                    </div>
+                    <p class="content_item_right">+5</p>
+                </div>
+                <div class="content_item">
+                    <div class="content_item_left">
+                        <p class="a">爱心积分</p>
+                        <p class="b">2019-01-02</p>
+                    </div>
+                    <p class="content_item_right">+5</p>
+                </div>
+                <div class="content_item">
+                    <div class="content_item_left">
+                        <p class="a">爱心积分</p>
+                        <p class="b">2019-01-02</p>
+                    </div>
+                    <p class="content_item_right">+5</p>
+                </div>
+                <div class="content_item">
+                    <div class="content_item_left">
+                        <p class="a">爱心积分</p>
+                        <p class="b">2019-01-02</p>
+                    </div>
+                    <p class="content_item_right">+5</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            //返回上一页
+            document
+                .getElementById("back")
+                .addEventListener("click", function() {
+                    window.history.go(-1);
+                });
+        </script>
+    </body>
+</html>

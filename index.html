@@ -26,7 +26,12 @@
                         <p>助力</p>
                     </div>
                     <img src="./image/Share.png" alt="" class="imgwh" />
-                    <img src="./image/ShopCarWhite.png" alt="" class="imgwh" />
+                    <img
+                        src="./image/ShopCarWhite.png"
+                        alt=""
+                        class="imgwh"
+                        id="shopcar"
+                    />
                 </div>
             </div>
             <div class="header_list">
@@ -299,7 +304,6 @@
                     sessionStorage.setItem("IndexState", JSON.stringify(tag));
                 }
 
-
                 // 切换bar事件
                 function ChangeBorderBottom(x) {
                     let tagArr = document.querySelectorAll(
@@ -320,6 +324,15 @@
                     ChangeBorderBottom(
                         JSON.parse(sessionStorage.getItem("IndexState")).local
                     );
+                }
+
+                // 购物车跳转
+                function ShopCarJump() {
+                    document
+                        .getElementById("shopcar")
+                        .addEventListener("click", function() {
+                            window.location.href = "./shopcar.html";
+                        });
                 }
 
                 // 默认&&挂载
@@ -346,6 +359,8 @@
                             ActivityJump(i);
                         });
                     }
+                    // ShopCarJump
+                    ShopCarJump();
                 }
 
                 // 活动跳转

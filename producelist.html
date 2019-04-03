@@ -316,10 +316,22 @@
             }
 
             //搜索跳转
-            function SearchJump(){
-                document.getElementById('search').addEventListener('click',function(){
-                    window.location.href='./search.html'
-                })
+            function SearchJump() {
+                document
+                    .getElementById("search")
+                    .addEventListener("click", function() {
+                        window.location.href = "./search.html";
+                    });
+            }
+
+            // 分类跳转
+            function ListJump() {
+               let tagArr=document.querySelectorAll('.content_list_item')
+               for(let i =0;i<tagArr.length;i++){
+                   tagArr[i].addEventListener('click',function(){
+                       window.location.href='./allproduce.html'
+                   })
+               }
             }
 
             // init
@@ -327,7 +339,8 @@
                 Mount();
                 AddCss(0);
                 ShowDiv(0);
-                SearchJump()
+                SearchJump();
+                ListJump();
             }
             // 执行
             Init();

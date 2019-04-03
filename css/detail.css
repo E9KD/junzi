@@ -1,0 +1,129 @@
+body {
+    background-color: #f5f5f4;
+}
+header {
+    height: 8vh;
+}
+.headerbox img {
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0px, -50%);
+}
+.headerbox {
+    overflow: hidden;
+    width: 92%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.titlea {
+    font-size: 14px;
+    color: #666666;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.param {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 94%;
+    margin: 0 auto;
+    padding: 3rem 0px;
+    box-shadow: 0 0 5px #999;
+}
+.name {
+    color: #0683bc;
+    font-size: 12px;
+}
+.num {
+    color: #0683bc;
+    font-size: 25px;
+    margin-top: 1rem;
+    font-weight: bolder;
+}
+.content_title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 94%;
+    margin: 0 auto;
+    color: #0683bc;
+}
+.content_title select {
+    background: url("../image/BottomArrow.png") 95% center no-repeat;
+    background-size: 10px 10px;
+    border: none;
+}
+.options {
+    color: #0683bc;
+}
+.content {
+    margin-top: 1rem;
+    font-size: 12px;
+}
+.content_list {
+    background-color: #ffffff;
+    margin-top: .4rem;
+}
+.content_list_header {
+    padding: 10px 3%;
+    border-bottom: 1px solid #e5e5e5;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_left {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header_left img {
+    width: 10px;
+    height: 10px;
+}
+.header_left p {
+    margin-left: 10px;
+}
+.header_right p {
+    color: #0683bc;
+    display: inline-block;
+}
+.content_item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 8%;
+}
+.content_item_left {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.content_item_left .a {
+    font-size: 14px;
+    color: black;
+}
+.content_item_left .b{
+    font-size: 12px;
+    color: #a7a7a7;
+    margin-top: 3px;
+}
+.content_item_right {
+    color: #0683bc;
+    font-size: 15px;
+    font-weight: bolder;
+}
