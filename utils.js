@@ -8,7 +8,7 @@ function GoBarPage(x) {
             window.location.href = "./allproduce.html";
             break;
         case 2:
-            window.location.href = "./top.html";
+            window.location.href = "./list.html";
             break;
         case 3:
             window.location.href = "./producelist.html";
