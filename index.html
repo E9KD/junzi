@@ -29,7 +29,12 @@
                         />
                         <p>助力</p>
                     </div>
-                    <img src="./image/Share.png" alt="" class="imgwh" />
+                    <img
+                        src="./image/Share.png"
+                        alt=""
+                        class="imgwh"
+                        id="share"
+                    />
                     <img
                         src="./image/ShopCarWhite.png"
                         alt=""
@@ -373,6 +378,27 @@
                         });
                 }
 
+                //视频跳转
+                function VideoJump() {
+                    let tagArr = document.querySelectorAll(
+                        ".section_video_box_content"
+                    );
+                    for (let i = 0; i < tagArr.length; i++) {
+                        tagArr[i].addEventListener("click", function() {
+                            window.location.href = "./video.html";
+                        });
+                    }
+                }
+
+                // share
+                function ShareJump() {
+                    document
+                        .getElementById("share")
+                        .addEventListener("click", function() {
+                            window.location.href = "./share.html";
+                        });
+                }
+
                 // 默认&&挂载
                 function Init() {
                     // 创建or读取session
@@ -399,6 +425,10 @@
                     }
                     // ShopCarJump
                     ShopCarJump();
+                    //VideoJump
+                    VideoJump();
+                    //ShareJump
+                    ShareJump()
                 }
 
                 // 活动跳转

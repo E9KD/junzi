@@ -45,7 +45,11 @@
                             <p class="text">河北留守儿童制作</p>
                             <div class="tip">
                                 <p>255人付款</p>
-                                <img src="./image/ShopCar.png" alt="" />
+                                <img
+                                    src="./image/ShopCar.png"
+                                    alt=""
+                                    class="shopcar"
+                                />
                             </div>
                         </div>
                     </div>
@@ -65,7 +69,11 @@
                             <p class="text">河北留守儿童制作</p>
                             <div class="tip">
                                 <p>255人付款</p>
-                                <img src="./image/ShopCar.png" alt="" />
+                                <img
+                                    src="./image/ShopCar.png"
+                                    alt=""
+                                    class="shopcar"
+                                />
                             </div>
                         </div>
                     </div>
@@ -85,7 +93,35 @@
                             <p class="text">河北留守儿童制作</p>
                             <div class="tip">
                                 <p>255人付款</p>
-                                <img src="./image/ShopCar.png" alt="" />
+                                <img
+                                    src="./image/ShopCar.png"
+                                    alt=""
+                                    class="shopcar"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <img
+                        src="./image/ProduceTest.png"
+                        alt=""
+                        class="content_image"
+                    />
+                    <div class="something_box">
+                        <div class="content_something">
+                            <div class="price">
+                                <p>手工挂件</p>
+                                <p class="price_price">¥&nbsp;36.00</p>
+                            </div>
+                            <p class="text">河北留守儿童制作</p>
+                            <div class="tip">
+                                <p>255人付款</p>
+                                <img
+                                    src="./image/ShopCar.png"
+                                    alt=""
+                                    class="shopcar"
+                                />
                             </div>
                         </div>
                     </div>
@@ -137,10 +173,23 @@
                     });
             }
 
+            //shopcar
+            function ShopCarJump() {
+                let tagArr = document.querySelectorAll(".shopcar");
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].addEventListener("click", function(e) {
+                        console.log(123);
+                        e.stopPropagation();
+                        window.location.href = "./shopcar.html";
+                    });
+                }
+            }
+
             // Init
             function Init() {
                 ProduceJump();
                 SearchJump();
+                ShopCarJump();
             }
 
             // 执行

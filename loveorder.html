@@ -734,8 +734,32 @@
                 document
                     .getElementById("back")
                     .addEventListener("click", function() {
-                        window.location.href = "./person.html";
+                        window.history.go(-1);
                     });
+            }
+
+            //店铺跳转
+            function ShopJump() {
+                let tagArr = document.querySelectorAll(
+                    ".order_item_title_left"
+                );
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].addEventListener("click", function() {
+                        window.location.href = "./index.html";
+                    });
+                }
+            }
+
+            // 商品跳转
+            function ProduceJump() {
+                let tagArr = document.querySelectorAll(
+                    ".order_item_content_right"
+                );
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].addEventListener("click", function() {
+                        window.location.href = "./produce.html";
+                    });
+                }
             }
 
             // Init
@@ -746,6 +770,10 @@
                 NormalOptionsCard();
                 // 返回挂载
                 GoBack();
+                //ShopJump
+                ShopJump();
+                //ProduceJump
+                ProduceJump()
             }
 
             // 执行

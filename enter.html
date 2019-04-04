@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/enter.css" />
+    </head>
+    <body>
+        <header>
+            <div class="headerbox">
+                <img src="./image/GoBack.png" alt="" id="back" />
+                <p class="titlea">报名通道</p>
+            </div>
+        </header>
+
+        <section>
+            <div class="inputbox">
+                <div class="item">
+                    <div class="item_title">
+                        <img src="./image/Need.png" alt="" />
+                        <p class="item_head">姓名<span></span></p>
+                        <p>:</p>
+                    </div>
+                    <div class="item_input">
+                        <input type="text" class="sinput" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_title">
+                        <img src="./image/Need.png" alt="" />
+                        <p class="item_head">年龄<span></span></p>
+                        <p>:</p>
+                    </div>
+                    <div class="item_input">
+                        <input type="text" class="sinput" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_title">
+                        <img src="./image/Need.png" alt="" />
+                        <p class="item_head">性别<span></span></p>
+                        <p>:</p>
+                    </div>
+                    <div class="item_input">
+                        <select name="" id="" class="select">
+                            <option
+                                value=""
+                                disabled
+                                selected
+                                style="display:none;"
+                                >选择您的性别</option
+                            >
+                            <option value="">男</option>
+                            <option value="">女</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_title">
+                        <p class="item_head">才艺<span></span></p>
+                        <p>:</p>
+                    </div>
+                    <div class="item_input">
+                        <input type="text" class="sinput" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_title">
+                        <p class="item_head">所在地<span></span></p>
+                        <p>:</p>
+                    </div>
+                    <div class="item_input">
+                        <input type="text" class="sinput" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_title">
+                        <img src="./image/Need.png" alt="" />
+                        <p class="item_head">联系方式<span></span></p>
+                        <p>:</p>
+                    </div>
+                    <div class="item_input">
+                        <input type="text" class="sinput" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_title">
+                        <img src="./image/Need.png" alt="" />
+                        <p class="item_head">个人简介<span></span></p>
+                        <p>:</p>
+                    </div>
+                    <div class="item_input">
+                        <input type="text" class="ainput" />
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_title">
+                        <img src="./image/Need.png" alt="" />
+                        <p class="item_head">参与理由<span></span></p>
+                        <p>:</p>
+                    </div>
+                    <div class="item_input">
+                        <input type="text" class="sinput" />
+                    </div>
+                </div>
+            </div>
+            <div class="upload">
+                <p class="upload_p">才艺视频：<span></span></p>
+                <img src="./image/Upload.png" alt="" />
+                <p style="color:#999999;">点击上传视频</p>
+            </div>
+            <div class="submit">
+                提交
+            </div>
+            <div style="height:2rem;"></div>
+        </section>
+        <script>
+            // 返回上一页
+            document
+                .getElementById("back")
+                .addEventListener("click", function() {
+                    window.history.go(-1);
+                });
+        </script>
+    </body>
+</html>

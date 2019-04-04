@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/video.css" />
+    </head>
+    <body>
+        <div class="videobox">
+            <div class="markbox" id="markbox">
+                <img src="./image/Video.png" alt="" class="videoimage" />
+                <img src="./image/PlayButton.png" alt="" id="playbutton" />
+                <img src="./image/GoBack.png" alt="" id="back" />
+            </div>
+            <div class="box" id="box">
+                <video
+                    controls="controls"
+                    id="video"
+                    src="http://cn-sdjn3-cu-v-05.acgvideo.com/upgcxcode/55/07/50280755/50280755-1-6.mp4?expires=1554355800&platform=html5&ssig=KkHZdVyq5_lAjJdCmfRQAQ&oi=2007166673&trid=8c26cb5a642c4fbbbbb98d0ad534aa45&nfb=maPYqpoel5MI3qOUX6YpRA==&nfc=1"
+                    type="video/mp4"
+                ></video>
+                <i class="i" id="i">返回</i>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content_title">
+                <p>中国儿童慈善活动日</p>
+                <img src="./image/ShareBlack.png" alt="" id="share" />
+            </div>
+            <div class="content_hot">
+                <div class="hot_left">
+                    <img src="./image/Hot.png" alt="" />
+                    <p>热度：</p>
+                    <p>21556</p>
+                    <p>万</p>
+                </div>
+                <div class="hot_right">
+                    <img src="./image/Time.png" alt="" />
+                    <p>2019-01-02</p>
+                </div>
+            </div>
+            <div class="content_content">
+                <p style="font-size:14px;">简介:</p>
+                <p style="font-size:12px;margin-top:.7rem">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动
+                    中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动
+                    中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动日中国儿童慈善活动
+                </p>
+            </div>
+        </div>
+
+        <div class="morevideo">
+            <div class="morevideo_title">
+                <p>周边视频</p>
+                <img src="./image/PrevIcon.png" alt="" />
+            </div>
+            <div class="morevideo_box">
+                <div class="section_video_box_content">
+                    <div class="imgbox">
+                        <img
+                            src="./image/PlayButton.png"
+                            alt=""
+                            class="playbtn"
+                        />
+                        <img src="./image/Video.png" alt="" class="img" />
+                    </div>
+                    <p>让世界充满爱--慈善中国义卖会</p>
+                </div>
+                <div class="section_video_box_content">
+                    <div class="imgbox">
+                        <img
+                            src="./image/PlayButton.png"
+                            alt=""
+                            class="playbtn"
+                        />
+                        <img src="./image/Video.png" alt="" class="img" />
+                    </div>
+                    <p>让世界充满爱--慈善中国义卖会</p>
+                </div>
+                <div class="section_video_box_content">
+                    <div class="imgbox">
+                        <img
+                            src="./image/PlayButton.png"
+                            alt=""
+                            class="playbtn"
+                        />
+                        <img src="./image/Video.png" alt="" class="img" />
+                    </div>
+                    <p>让世界充满爱--慈善中国义卖会</p>
+                </div>
+                <div class="section_video_box_content">
+                    <div class="imgbox">
+                        <img
+                            src="./image/PlayButton.png"
+                            alt=""
+                            class="playbtn"
+                        />
+                        <img src="./image/Video.png" alt="" class="img" />
+                    </div>
+                    <p>让世界充满爱--慈善中国义卖会</p>
+                </div>
+                <div class="section_video_box_content">
+                    <div class="imgbox">
+                        <img
+                            src="./image/PlayButton.png"
+                            alt=""
+                            class="playbtn"
+                        />
+                        <img src="./image/Video.png" alt="" class="img" />
+                    </div>
+                    <p>让世界充满爱--慈善中国义卖会</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            let plays = document.getElementById("video");
+            let btn = document.getElementById("playbutton");
+            let cancel = document.getElementById("i");
+            //播放
+            btn.addEventListener("click", function() {
+                document.getElementById("markbox").style.display = "none";
+                document.getElementById("box").style.display = "block";
+                plays.play();
+            });
+            // 取消播放
+            cancel.addEventListener("click", function() {
+                plays.pause();
+                document.getElementById("box").style.display = "none";
+                document.getElementById("markbox").style.display = "block";
+            });
+            // share
+            document
+                .getElementById("share")
+                .addEventListener("click", function() {
+                    window.location.href = "./share.html";
+                });
+            // back
+            document
+                .getElementById("back")
+                .addEventListener("click", function() {
+                    window.history.go(-1);
+                });
+        </script>
+    </body>
+</html>

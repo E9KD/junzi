@@ -16,7 +16,7 @@
         <!-- header -->
         <header>
             <img src="./image/GoBack.png" alt="" class="back" id="back" />
-            <img src="./image/ShareBlack.png" alt="" class="share" />
+            <img src="./image/ShareBlack.png" alt="" class="share" id="share" />
         </header>
         <!-- 轮播 -->
         <div class="swiper-container">
@@ -40,7 +40,7 @@
                     节日礼物 幼儿园 手工制作 纽扣花束
                     儿童创意益智玩具儿童创意益智玩具儿童创意益智玩具儿童创意益智玩具儿童创意益智玩具
                 </p>
-                <img class="content_title_share" src="./image/ShareBlack.png" />
+                <!-- <img class="content_title_share" src="./image/ShareBlack.png"  /> -->
             </div>
             <p class="content_tip">温暖公益 关爱留守儿童 现发货 毁坏包赔</p>
             <div class="content_price">
@@ -109,7 +109,7 @@
                     <img src="./image/CustomerService.png" alt="" />
                     <p>客服</p>
                 </div>
-                <div class="icon_item">
+                <div class="icon_item" id="gohome">
                     <img src="./image/Home.png" alt="" />
                     <p>首页</p>
                 </div>
@@ -126,12 +126,21 @@
             <p class="makesure" id="makesure">确定</p>
         </div>
         <script>
+            //返回首页
+            function GoHome() {
+                document
+                    .getElementById("gohome")
+                    .addEventListener("click", function() {
+                        window.location.href = "./index.html";
+                    });
+            }
+
             // 返回全部商品页
             function BackAllProduce() {
                 document
                     .getElementById("back")
                     .addEventListener("click", function() {
-                        window.location.href = "./allproduce.html";
+                        window.history.go(-1);
                     });
             }
 
@@ -197,6 +206,15 @@
                     });
             }
 
+            // share
+            function ShareJump() {
+                document
+                    .getElementById("share")
+                    .addEventListener("click", function() {
+                        window.location.href = "./share.html";
+                    });
+            }
+
             // Init
             function Init() {
                 // 添加图片
@@ -210,7 +228,11 @@
                 // shopcar
                 ShopCarJump();
                 //立刻购买
-                BuyNowJump()
+                BuyNowJump();
+                //GoHome
+                GoHome();
+                // ShareJump
+                ShareJump();
             }
 
             // 执行
