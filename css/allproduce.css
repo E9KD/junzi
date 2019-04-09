@@ -14,7 +14,7 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;width: 25%;
 }
 .footer_item p {
     font-size: 12px;

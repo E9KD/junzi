@@ -21,6 +21,7 @@ body {
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
+    width: 25%;
 }
 .footer_item p {
     font-size: 12px;

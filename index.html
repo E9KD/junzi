@@ -26,6 +26,7 @@
                             src="./image/HeaderLove.png"
                             alt=""
                             class="imgwh"
+                            id="like"
                         />
                         <p>助力</p>
                     </div>
@@ -44,7 +45,7 @@
                 </div>
             </div>
             <div class="header_list">
-                <div class="search">
+                <div class="search" id="search">
                     <img src="./image/RearchWhite.png" alt="" class="imgwh" />
                     <p>搜索</p>
                 </div>
@@ -208,6 +209,30 @@
 
         <!-- 活动 -->
         <section class="section_party">
+            <div class="section_party_optioncard">
+                <p class="party_item hover">君子之家</p>
+                <p class="party_item">残障人士</p>
+                <p class="party_item">赛事活动</p>
+            </div>
+            <!-- 君子之家 -->
+            <div class="section_party_box" style="display:block">
+                <div class="section_party_box_content">
+                    <img src="./image/PartyImage.png" alt="" />
+                    <p>让世界充满爱--慈善中国义卖会</p>
+                </div>
+            </div>
+            <!-- 残障人士 -->
+            <div class="section_party_box">
+                <div class="section_party_box_content">
+                    <img src="./image/PartyImage.png" alt="" />
+                    <p>让世界充满爱--慈善中国义卖会</p>
+                </div>
+                <div class="section_party_box_content">
+                    <img src="./image/PartyImage.png" alt="" />
+                    <p>让世界充满爱--慈善中国义卖会</p>
+                </div>
+            </div>
+            <!-- 赛事活动 -->
             <div class="section_party_box">
                 <div class="section_party_box_content">
                     <img src="./image/PartyImage.png" alt="" />
@@ -308,9 +333,78 @@
                 <p>个人中心</p>
             </div>
         </footer>
+        <div class="message" id="message">
+            <div class="message_title">
+                助力成功
+            </div>
+            <div class="message_content">
+                感谢您为公益事业献出的一份力
+            </div>
+            <div class="message_btn" id="messagebtn">
+                关闭
+            </div>
+        </div>
         <script src="./utils.js"></script>
         <script>
             window.onload = function() {
+                //活动挂载
+                function PartyMount() {
+                    let tagArr = document.querySelectorAll(".party_item");
+                    for (let i = 0; i < tagArr.length; i++) {
+                        tagArr[i].addEventListener("click", function() {
+                            PartyChange(i);
+                        });
+                    }
+
+                    // 活动切换
+                    function PartyChange(x) {
+                        let tagArr = document.querySelectorAll(".party_item");
+                        let tagList = document.querySelectorAll(
+                            ".section_party_box"
+                        );
+                        for (let i = 0; i < tagArr.length; i++) {
+                            tagArr[i].classList.remove("hover");
+                            tagList[i].style.display = "none";
+                        }
+                        tagArr[x].classList.add("hover");
+                        tagList[x].style.display = "block";
+                    }
+                }
+
+                // 搜索
+                function SearchJump() {
+                    document
+                        .getElementById("search")
+                        .addEventListener("click", function() {
+                            window.location.href = "./search.html";
+                        });
+                }
+
+                // 助力点击
+                function Love() {
+                    document
+                        .getElementsByClassName("like")[0]
+                        .addEventListener("click", function() {
+                            // 变红
+                            document.getElementById("like").src =
+                                "./image/HeartLoveActive.png";
+                            // 弹出层
+                            document.getElementById("message").style.display =
+                                "flex";
+                        });
+                }
+
+                // 弹出层关闭
+                function MessageClose() {
+                    document
+                        .getElementById("messagebtn")
+                        .addEventListener("click", function() {
+                            // 变红
+                            document.getElementById("message").style.display =
+                                "none";
+                        });
+                }
+
                 // 创建当前位置session
                 function IndexState() {
                     if (sessionStorage.getItem("IndexState")) {
@@ -428,7 +522,15 @@
                     //VideoJump
                     VideoJump();
                     //ShareJump
-                    ShareJump()
+                    ShareJump();
+                    //Love
+                    Love();
+                    //MessageClose
+                    MessageClose();
+                    //SearchJump
+                    SearchJump();
+                    //PartyMount
+                    PartyMount();
                 }
 
                 // 活动跳转
