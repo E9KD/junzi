@@ -56,21 +56,21 @@
                 <div class="content_price_address">上海崇明</div>
             </div>
             <div class="content_options">
-                <div class="content_options_box">
+                <div class="content_options_box" id="serve">
                     <div class="content_options_left">
                         <p>服务：</p>
                         <p>不支持7天无理由退换货 · 破损补寄</p>
                     </div>
                     <img src="./image/PrevIcon.png" alt="" />
                 </div>
-                <div class="content_options_box">
+                <div class="content_options_box" id="size">
                     <div class="content_options_left">
                         <p>规格：</p>
                         <p>请选择</p>
                     </div>
                     <img src="./image/PrevIcon.png" alt="" />
                 </div>
-                <div class="content_options_box">
+                <div class="content_options_box" id="source">
                     <div class="content_options_left">
                         <p>来源：</p>
                         <p>河北留守儿童制作</p>
@@ -123,9 +123,158 @@
         </footer>
         <!-- Popup -->
         <div class="popup" id="popup">
-            <p class="makesure" id="makesure">确定</p>
+            <!-- 关闭 -->
+            <div class="closebox">
+                <p class="close" id="close">X</p>
+            </div>
+
+            <!-- 服务 -->
+            <div class="popupbox">
+                <div class="com_item hover">
+                    服务1
+                </div>
+                <div class="com_item hover">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+            </div>
+            <!-- 规格 -->
+            <div class="popupbox">
+                <!-- 一种规格 -->
+                <div class="popupbox_list">
+                    <p class="list_title">分类1</p>
+                    <div class="list_content">
+                        <div class="com_item hover">
+                            服务1
+                        </div>
+                        <div class="com_item hover">
+                            服务1服务1服务1服务1服务1服务1
+                        </div>
+                    </div>
+                </div>
+                <!-- 另一种规格 -->
+                <div class="popupbox_list">
+                    <p class="list_title">分类1</p>
+                    <div class="list_content">
+                        <div class="com_item hover">
+                            服务1
+                        </div>
+                        <div class="com_item hover">
+                            服务1服务1服务1服务1服务1服务1
+                        </div>
+                    </div>
+                </div>
+                <div class="popupbox_list">
+                    <p class="list_title">分类1</p>
+                    <div class="list_content">
+                        <div class="com_item ">
+                            服务1
+                        </div>
+                        <div class="com_item ">
+                            服务1服务1服务1服务1服务1服务1
+                        </div>
+                    </div>
+                </div>
+                <div class="popupbox_list">
+                    <p class="list_title">分类1</p>
+                    <div class="list_content">
+                        <div class="com_item ">
+                            服务1
+                        </div>
+                        <div class="com_item ">
+                            服务1服务1服务1服务1服务1服务1
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 来源 -->
+            <div class="popupbox">
+                <div class="com_item hover">
+                    服务1
+                </div>
+                <div class="com_item hover">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+                <div class="com_item">
+                    服务1
+                </div>
+                <div class="com_item">
+                    服务1服务1服务1服务1服务1服务1
+                </div>
+            </div>
+            <!-- button -->
+            <div class="btnbox">
+                <p class="makesure btn" id="makesure">确定</p>
+                <p class="pushcar btn" id="pushcar">加入购物车</p>
+                <p class="buy btn" id="buy">立刻购买</p>
+            </div>
         </div>
         <script>
+            // 添加到购物车
+            function PushShopCar() {
+                document
+                    .getElementById("pushcar")
+                    .addEventListener("click", function() {
+                        window.location.href = "./shopcar.html";
+                    });
+            }
+
+            // 立刻购买
+            function BuyNow() {
+                document
+                    .getElementById("buynow")
+                    .addEventListener("click", function() {
+                        window.location.href = "./confirmationOrder.html";
+                    });
+            }
+
             //返回首页
             function GoHome() {
                 document
@@ -172,10 +321,25 @@
                 }
             }
             // 弹出层变化
-            function PopupChange(e) {
+            function PopupChange(x) {
+                let tagArr = document.querySelectorAll(".popupbox");
+                let btnList = document.querySelectorAll(".btn");
                 document.getElementById("popup").style.height = "90vh";
-                document.getElementById("makesure").style.display = "block";
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].style.display = "none";
+                    btnList[i].style.display = "none";
+                }
+                tagArr[x].style.display = "block";
+                if (x == 1) {
+                    btnList[1].style.display = "block";
+                    btnList[2].style.display = "block";
+                } else {
+                    btnList[0].style.display = "block";
+                }
+                // document.getElementById("makesure").style.display = "block";
             }
+
+            //
 
             // 弹出层关闭
             function ClosePopup() {
@@ -183,8 +347,15 @@
                     .getElementById("makesure")
                     .addEventListener("click", function() {
                         document.getElementById("popup").style.height = "0px";
-                        document.getElementById("makesure").style.display =
-                            "none";
+                        // document.getElementById("makesure").style.display =
+                        //     "none";
+                    });
+                document
+                    .getElementById("close")
+                    .addEventListener("click", function() {
+                        document.getElementById("popup").style.height = "0px";
+                        // document.getElementById("makesure").style.display =
+                        //     "none";
                     });
             }
 
@@ -233,6 +404,10 @@
                 GoHome();
                 // ShareJump
                 ShareJump();
+                // PushShopCar
+                PushShopCar();
+                //BuyNow
+                BuyNow();
             }
 
             // 执行
