@@ -113,8 +113,8 @@
                     <img src="./image/Home.png" alt="" />
                     <p>首页</p>
                 </div>
-                <div class="icon_item">
-                    <img src="./image/HeartNormal.png" alt="" />
+                <div class="icon_item" id="getit">
+                    <img src="./image/HeartNormal.png" alt="" id="get" />
                     <p>收藏</p>
                 </div>
             </div>
@@ -257,6 +257,15 @@
             </div>
         </div>
         <script>
+            // 添加收藏
+            function GetProduce() {
+                document
+                    .getElementById("getit")
+                    .addEventListener("click", function() {
+                        document.getElementById("get").src='./image/Heart.png'
+                    });
+            }
+
             // 添加到购物车
             function PushShopCar() {
                 document
@@ -408,6 +417,8 @@
                 PushShopCar();
                 //BuyNow
                 BuyNow();
+                //GetProduce
+                GetProduce()
             }
 
             // 执行

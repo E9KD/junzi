@@ -1,0 +1,93 @@
+body {
+    background-color: #f5f5f4;
+}
+header {
+    height: 8vh;
+    background-color: #3399cc;
+}
+.headerbox img {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0px, -50%);
+}
+.headerbox {
+    overflow: hidden;
+    width: 92%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.titlea {
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+section {
+    height: 92vh;
+    overflow: auto;
+}
+.item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    width: 96%;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 10px 0px;
+    color: #999999;
+}
+.produce {
+    width: 25%;
+}
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+.price {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.price p {
+    font-size: 12px;
+    color: #999999;
+}
+.saleprice {
+    color: #ff6600 !important;
+    font-size: 13px !important;
+    margin-right: 0.5rem;
+}
+.shop {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0.8rem;
+}
+.shop img {
+    width: 20px;
+    height: 20px;
+}
+.shop p {
+    margin-left: 5px;
+    font-size: 12px;
+}
+.clear {
+    font-size: 12px;
+    padding: 10px;
+    color: red;
+}

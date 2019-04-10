@@ -2,7 +2,7 @@ body {
     background-color: #f5f5f4;
 }
 header {
-    height: 8vh;
+    height: 8vh;    background-color: #3399cc;
 }
 .headerbox img {
     width: 15px;
@@ -21,7 +21,7 @@ header {
 }
 .titlea {
     font-size: 14px;
-    color: #666666;
+    color: #fff;
     position: absolute;
     top: 50%;
     left: 50%;

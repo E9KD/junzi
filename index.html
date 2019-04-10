@@ -12,7 +12,7 @@
         <!-- 头部 -->
         <header class="header">
             <div class="header_title">
-                <div class="header_title_left">
+                <div class="header_title_left" id="shoppage">
                     <p>君子之家店铺</p>
                     <img
                         src="./image/HeaderArrow.png"
@@ -359,6 +359,15 @@
                     }
                 }
 
+                // 店铺首页
+                function ShopJump() {
+                    document
+                        .getElementById("shoppage")
+                        .addEventListener("click", function() {
+                            window.location.href = "./shoppage.html";
+                        });
+                }
+
                 // 搜索
                 function SearchJump() {
                     document
@@ -519,6 +528,8 @@
                     SearchJump();
                     //PartyMount
                     PartyMount();
+                    //ShopJump
+                    ShopJump()
                 }
 
                 // 活动跳转
