@@ -1,0 +1,173 @@
+body {
+    background-color: #f5f5f4;
+}
+header {
+    height: 8vh;
+}
+.headerbox img {
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0px, -50%);
+}
+.headerbox {
+    overflow: hidden;
+    width: 92%;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+.titlea {
+    font-size: 14px;
+    color: #666666;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+section {
+    background-color: #fff;
+    padding-top: 1rem;
+}
+.inputbox {
+    width: 96%;
+    margin: 0 auto;
+}
+.item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.3rem 0px;
+}
+.item img {
+    width: 6px;
+    height: 6px;
+}
+.item_title {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    width: 25%;
+}
+.item_title img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.item_head {
+    width: 100%;
+    font-size: 12px;
+    color: #666666;
+    margin-left: 1rem;
+}
+.item_input {
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.item_input_more {
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.sinput {
+    border: 1px solid #0683bc;
+    border-radius: 5px;
+    height: 25px;
+    margin-left: 1rem;
+    width: 60%;
+}
+.card {
+    padding: 0px 5px;
+    border: 1px solid #0683bc;
+    border-radius: 5px;
+    height: 25px;
+    font-size: 12px;
+    line-height: 25px;
+    color: #0683bc;
+}
+.hover {
+    background-color: #0683bc;
+    color: #fff;
+}
+.more {
+    border: 1px solid #0683bc;
+    border-radius: 5px;
+    height: 25px;
+    margin-left: 1rem;
+    line-height: 25px;
+    width: 30%;
+    color: #666;
+}
+.ainput {
+    border: 1px solid #0683bc;
+    border-radius: 5px;
+    height: 25px;
+    margin-left: 1rem;
+    width: 90%;
+    height: 80px;
+}
+.select {
+    border: 1px solid #0683bc;
+    border-radius: 5px;
+    height: 25px;
+    margin-left: 1rem;
+    width: 60%;
+    background: url("../image/ArrowDown.png") 95% center no-repeat;
+    background-size: 10px 7px;
+    color: #666;
+}
+.item_head {
+    text-align: justify;
+}
+.item_head > span {
+    display: inline-block /* Opera */;
+    padding-left: 100%;
+}
+.upload {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: baseline;
+    width: 94%;
+    margin: 10px auto;
+}
+.upload img {
+    width: 15px;
+    height: 15px;
+}
+.upload p {
+    font-size: 12px;
+    color: #666;
+    margin-left: 1rem;
+}
+.upload_p {
+    text-align: justify;
+}
+.upload_p > span {
+    display: inline-block /* Opera */;
+    padding-left: 100%;
+}
+.submit {
+    background-color: #0683bc;
+    color: #fff;
+    font-size: 15px;
+    width: 60%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
