@@ -322,6 +322,28 @@ footer {
     height: 60vh;
     overflow: auto;
 }
+.num {
+    padding: 3px 10px;
+    font-size: 15px;
+}
+.number {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.change {
+    font-size: 15px;
+    color: #999999;
+    padding: 3px 10px;
+    background-color: #eee;
+}
+.funbox {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 .com_item {
     padding: 5px;
     background-color: #eee;
@@ -347,7 +369,6 @@ footer {
 .list_title {
     font-size: 15px;
     margin: 5px 0px;
-
 }
 .list_content {
     display: flex;

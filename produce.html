@@ -181,6 +181,17 @@
             </div>
             <!-- 规格 -->
             <div class="popupbox">
+                <!-- 选择数量 -->
+
+                <div class="number">
+                    <p>购买数量</p>
+                    <div class="funbox">
+                        <p class="change" id="sub">-</p>
+                        <p id="number" class="num">1</p>
+                        <p class="change" id="add">+</p>
+                    </div>
+                </div>
+
                 <!-- 一种规格 -->
                 <div class="popupbox_list">
                     <p class="list_title">分类1</p>
@@ -257,12 +268,43 @@
             </div>
         </div>
         <script>
+            // 增加数量
+            function AddNumber() {
+                let tag = document.getElementById("number");
+                tag.innerText = Number(tag.innerText) + 1;
+            }
+
+            //减少数量
+            function SubNumber() {
+                let tag = document.getElementById("number");
+                if (Number(tag.innerText) - 1 < 0) {
+                    tag.innerText = 0;
+                } else {
+                    tag.innerText = Number(tag.innerText) - 1;
+                }
+            }
+
+            // 选择数量
+            function ChangeNumber() {
+                document
+                    .getElementById("add")
+                    .addEventListener("click", function() {
+                        AddNumber();
+                    });
+                document
+                    .getElementById("sub")
+                    .addEventListener("click", function() {
+                        SubNumber();
+                    });
+            }
+
             // 添加收藏
             function GetProduce() {
                 document
                     .getElementById("getit")
                     .addEventListener("click", function() {
-                        document.getElementById("get").src='./image/Heart.png'
+                        document.getElementById("get").src =
+                            "./image/Heart.png";
                     });
             }
 
@@ -418,7 +460,9 @@
                 //BuyNow
                 BuyNow();
                 //GetProduce
-                GetProduce()
+                GetProduce();
+                //ChangeNumber
+                ChangeNumber();
             }
 
             // 执行
