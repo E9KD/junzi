@@ -6,6 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css"
+        />
         <title>首页</title>
     </head>
     <body>
@@ -44,21 +48,104 @@
                     />
                 </div>
             </div>
-            <div class="header_list">
-                <div class="search" id="search">
-                    <img src="./image/RearchWhite.png" alt="" class="imgwh" />
-                    <p>搜索</p>
+            <div class="input" id="input">
+                <img src="./image/RearchWhite.png" alt="" />
+                <p>搜索</p>
+            </div>
+            <div class="headerbox" id="headerbox">
+                <div class="header_list">
+                    <div class="search" id="search">
+                        <img
+                            src="./image/RearchWhite.png"
+                            alt=""
+                            class="imgwh"
+                        />
+                        <p>搜索</p>
+                    </div>
+                    <p class="header_list_option">首页</p>
+                    <p class="header_list_option">捐助</p>
+                    <p class="header_list_option">活动</p>
+                    <p class="header_list_option">视频</p>
                 </div>
-                <p class="header_list_option">首页</p>
-                <p class="header_list_option">捐助</p>
-                <p class="header_list_option">活动</p>
-                <p class="header_list_option">视频</p>
             </div>
         </header>
 
+        <!-- 轮播 -->
+        <div class="swiperbox" id="swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./image/ProduceImage.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./image/ProduceImage.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./image/ProduceImage.png" alt="" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
         <!-- 首页 -->
-        <section class="section_home">
-            <img src="./image/Post.png" alt="" />
+
+        <section class="section_home" style="margin-top:1rem;">
+            <div class="home_barbox">
+                <div class="home_barbox_item" id="partyjump">
+                    <img src="./image/IndexParty.png" alt="" />
+                    <p>活动</p>
+                </div>
+                <div class="home_barbox_item" id="donjump">
+                    <img src="./image/IndexDon.png" alt="" />
+                    <p>捐助</p>
+                </div>
+                <div class="home_barbox_item" id="videojump">
+                    <img src="./image/IndexVideo.png" alt="" />
+
+                    <p>视频</p>
+                </div>
+            </div>
+
+            <div class="home_content_imagebox">
+                <img src="./image/IndexSa.png" alt="" />
+                <p>商品推荐</p>
+                <img src="./image/IndexSb.png" alt="" />
+            </div>
+            <div class="home_goods">
+                <div class="home_goods_item">
+                    <img src="./image/a22.png" alt="" />
+                    <p class="goods_item_title">
+                        极度空间（JDKJ）创意生日礼物diy小屋手工制作diy七夕情人节礼物
+                        幸福街角
+                    </p>
+                    <div class="goods_item_price">
+                        <p class="price_price">¥556</p>
+                        <p class="price_number">123123付款</p>
+                    </div>
+                </div>
+                <div class="home_goods_item">
+                    <img src="./image/a22.png" alt="" />
+                    <p class="goods_item_title">
+                        极度空间（JDKJ）创意生日礼物diy小屋手工制作diy七夕情人节礼物
+                        幸福街角
+                    </p>
+                    <div class="goods_item_price">
+                        <p class="price_price">¥556</p>
+                        <p class="price_number">123123付款</p>
+                    </div>
+                </div>
+                <div class="home_goods_item">
+                    <img src="./image/a22.png" alt="" />
+                    <p class="goods_item_title">
+                        极度空间（JDKJ）创意生日礼物diy小屋手工制作diy七夕情人节礼物
+                        幸福街角
+                    </p>
+                    <div class="goods_item_price">
+                        <p class="price_price">¥556</p>
+                        <p class="price_number">123123付款</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- 捐助 -->
@@ -343,20 +430,36 @@
                             PartyChange(i);
                         });
                     }
+                }
 
-                    // 活动切换
-                    function PartyChange(x) {
-                        let tagArr = document.querySelectorAll(".party_item");
-                        let tagList = document.querySelectorAll(
-                            ".section_party_box"
-                        );
-                        for (let i = 0; i < tagArr.length; i++) {
-                            tagArr[i].classList.remove("hover");
-                            tagList[i].style.display = "none";
-                        }
-                        tagArr[x].classList.add("hover");
-                        tagList[x].style.display = "block";
+                //活动挂载
+                function IndexJump() {
+                    let tagArr = document.querySelectorAll(".home_barbox_item");
+
+                    tagArr[0].addEventListener("click", function() {
+                        ChangeBorderBottom(2);
+                    });
+                    tagArr[1].addEventListener("click", function() {
+                        ChangeBorderBottom(1);
+                    });
+
+                    tagArr[2].addEventListener("click", function() {
+                        ChangeBorderBottom(3);
+                    });
+                }
+
+                // 活动切换
+                function PartyChange(x) {
+                    let tagArr = document.querySelectorAll(".party_item");
+                    let tagList = document.querySelectorAll(
+                        ".section_party_box"
+                    );
+                    for (let i = 0; i < tagArr.length; i++) {
+                        tagArr[i].classList.remove("hover");
+                        tagList[i].style.display = "none";
                     }
+                    tagArr[x].classList.add("hover");
+                    tagList[x].style.display = "block";
                 }
 
                 // 店铺首页
@@ -440,6 +543,19 @@
 
                 // 切换bar事件
                 function ChangeBorderBottom(x) {
+                    if (x != 0) {
+                        document.getElementById("swiper").style.display =
+                            "none";
+                        document.getElementById("input").style.display = "none";
+                        document.getElementById("headerbox").style.display =
+                            "block";
+                    } else if (x == 0) {
+                        document.getElementById("headerbox").style.display =
+                            "none";
+                        document.getElementById("input").style.display = "flex";
+                        document.getElementById("swiper").style.display =
+                            "block";
+                    }
                     let tagArr = document.querySelectorAll(
                         ".header_list_option"
                     );
@@ -529,7 +645,9 @@
                     //PartyMount
                     PartyMount();
                     //ShopJump
-                    ShopJump()
+                    ShopJump();
+                    // /IndexJump
+                    IndexJump();
                 }
 
                 // 活动跳转
@@ -540,6 +658,20 @@
                 // 执行
                 Init();
             };
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+        <script>
+            let mySwiper = new Swiper(".swiper-container", {
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: true
+                },
+                pagination: {
+                    el: ".swiper-pagination"
+                }
+            });
         </script>
     </body>
 </html>
