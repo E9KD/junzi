@@ -71,22 +71,22 @@
         </header>
 
         <!-- 轮播 -->
-        <div class="swiperbox" id="swiper">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="./image/ProduceImage.png" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./image/ProduceImage.png" alt="" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./image/ProduceImage.png" alt="" />
-                    </div>
+        <!-- <div class="swiperbox" id="swiper"> -->
+        <div class="swiper-container swiperbox" id="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./image/ProduceImage.png" alt="" />
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-slide">
+                    <img src="./image/ProduceImage.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/ProduceImage.png" alt="" />
+                </div>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
+        <!-- </div> -->
         <!-- 首页 -->
 
         <section class="section_home" style="margin-top:1rem;">
@@ -108,7 +108,7 @@
 
             <div class="home_content_imagebox">
                 <img src="./image/IndexSa.png" alt="" />
-                <p>商品推荐</p>
+                <p id="name">商品推荐</p>
                 <img src="./image/IndexSb.png" alt="" />
             </div>
             <div class="home_goods">
@@ -544,17 +544,30 @@
                 // 切换bar事件
                 function ChangeBorderBottom(x) {
                     if (x != 0) {
+                        let count = 0;
                         document.getElementById("swiper").style.display =
                             "none";
                         document.getElementById("input").style.display = "none";
                         document.getElementById("headerbox").style.display =
                             "block";
+                        // 曲线救国
+                        // if (
+                        //     location.href.indexOf("#reloaded") != -1 &&
+                        //     count == 0
+                        // ) {
+                        //     location.href = location.href.split("#")[0];
+                        // }
                     } else if (x == 0) {
                         document.getElementById("headerbox").style.display =
                             "none";
                         document.getElementById("input").style.display = "flex";
                         document.getElementById("swiper").style.display =
                             "block";
+                        // 曲线救国
+                        // if (location.href.indexOf("#reloaded") == -1) {
+                        //     location.href = location.href + "#reloaded";
+                        //     location.reload();
+                        // }
                     }
                     let tagArr = document.querySelectorAll(
                         ".header_list_option"
@@ -664,10 +677,12 @@
             let mySwiper = new Swiper(".swiper-container", {
                 loop: true,
                 autoplay: {
-                    delay: 2000,
+                    delay: 1000,
                     stopOnLastSlide: false,
                     disableOnInteraction: true
                 },
+                observer: true,
+
                 pagination: {
                     el: ".swiper-pagination"
                 }
