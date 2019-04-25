@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/evaluate.css" />
+    </head>
+    <body>
+        <header>
+            <div class="headerbox">
+                <img
+                    src="./image/GoBackWhite.png"
+                    alt=""
+                    id="back"
+                    class="back"
+                />
+                <p class="title">评价</p>
+                <p class="chat">发布</p>
+            </div>
+        </header>
+
+        <section>
+            <div class="goodsevaluate">
+                <img src="./image/a1.png" alt="" />
+                <p>描述相符</p>
+                <div id="goodstar" class="goodsevaluate_start star">
+                    <ul>
+                        <li><a href="javascript:;">1</a></li>
+
+                        <li><a href="javascript:;">2</a></li>
+
+                        <li><a href="javascript:;">3</a></li>
+
+                        <li><a href="javascript:;">4</a></li>
+
+                        <li><a href="javascript:;">5</a></li>
+                    </ul>
+                </div>
+                <p id="goodevaluate">非常好</p>
+            </div>
+            <textarea
+                name=""
+                id="input"
+                cols="30"
+                rows="10"
+                placeholder="宝贝满足你的期待吗？说说你的使用新的，分享给想买的他们吧"
+            ></textarea>
+            <div class="imagebox">
+                <div class="imagebox_box">
+                    <img src="./image/a1.png" alt="" class="upload" />
+                    <p class="delete">X</p>
+                </div>
+                <div class="imagebox_box">
+                    <img src="./image/a1.png" alt="" class="upload" />
+                    <p class="delete">X</p>
+                </div>
+                <img src="./image/UpLoadImage.png" alt="" class="upload" />
+            </div>
+        </section>
+    </body>
+    <script>
+        console.log();
+        // 返回上一页
+        document.getElementById("back").addEventListener("click", function() {
+            window.history.go(-1);
+        });
+    </script>
+    <script type="text/javascript">
+        // 商品的评价
+        window.onload = function() {
+            var oStar = document.getElementById("goodstar");
+
+            var aLi = oStar.getElementsByTagName("li");
+
+            var oUl = oStar.getElementsByTagName("ul")[0];
+
+            var oSpan = oStar.getElementsByTagName("span")[1];
+
+            var oP = oStar.getElementsByTagName("p")[0];
+
+            var i = (iScore = iStar = 0);
+
+            for (i = 1; i <= aLi.length; i++) {
+                aLi[i - 1].index = i;
+
+                aLi[i - 1].onmouseover = function() {
+                    fnPoint(this.index);
+                };
+
+                aLi[i - 1].onmouseout = function() {
+                    fnPoint();
+                };
+
+                function fnPoint(iArg) {
+                    iScore = iArg || iStar;
+
+                    for (i = 0; i < aLi.length; i++)
+                        aLi[i].className = i < iScore ? "on" : "";
+                }
+
+                aLi[i - 1].onclick = function() {
+                    iStar = this.index;
+                    let arr = ["非常差", "不好", "一般", "还行", "非常好"];
+                    document.getElementById("goodevaluate").innerText =
+                        arr[iStar - 1];
+                    // iStar就是当前的分数，分1到5
+                    // 你的程序写到下面
+                };
+            }
+        };
+    </script>
+</html>

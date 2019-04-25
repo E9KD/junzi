@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/allevaluate.css" />
+    </head>
+    <body>
+        <header>
+            <div class="headerbox">
+                <img
+                    src="./image/GoBackWhite.png"
+                    alt=""
+                    id="back"
+                    class="back"
+                />
+                <p class="title">全部评价</p>
+            </div>
+        </header>
+        <section>
+            <div class="list">
+                <p class="hover">全部</p>
+                <p>图片</p>
+            </div>
+            <div class="item">
+                <div class="userinfo">
+                    <img src="./image/Avatar.png" alt="" />
+                    <p>用户名称</p>
+                </div>
+                <div class="time">
+                    <p>2019-01-01</p>
+                    <p>尺寸：Xl</p>
+                    <p>颜色：白色</p>
+                </div>
+                <div class="content">
+                    <p>
+                        theMSLAN2019春季新女装复古优雅纯色袖口拼接织带衬衫the
+                        mslan 米白
+                        LtheMSLAN2019春季新女装复古优雅纯色袖口拼接织带衬衫the
+                        mslan 米白
+                        LtheMSLAN2019春季新女装复古优雅纯色袖口拼接织带衬衫the
+                        mslan 米白 L
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="userinfo">
+                    <img src="./image/Avatar.png" alt="" />
+                    <p>用户名称</p>
+                </div>
+                <div class="time">
+                    <p>2019-01-01</p>
+                    <p>尺寸：Xl</p>
+                    <p>颜色：白色</p>
+                </div>
+                <div class="content">
+                    <p>
+                        theMSLAN2019春季新女装复古优雅纯色袖口拼接织带衬衫the
+                        mslan 米白
+                        LtheMSLAN2019春季新女装复古优雅纯色袖口拼接织带衬衫the
+                        mslan 米白
+                        LtheMSLAN2019春季新女装复古优雅纯色袖口拼接织带衬衫the
+                        mslan 米白 L
+                    </p>
+                    <div class="imagebox">
+                        <img src="./image/a1.png" alt="" class="imageprev" />
+                        <img src="./image/a1.png" alt="" class="imageprev" />
+                        <img src="./image/a1.png" alt="" class="imageprev" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="prevbox" id="prevbox">
+            <p class="close" id="close">X</p>
+            <img src="./image/a1.png" alt="" />
+        </div>
+    </body>
+    <script>
+        document
+            .querySelectorAll(".imageprev")[0]
+            .addEventListener("click", function() {
+                document.getElementById("prevbox").style.display = "block";
+            });
+
+        document.getElementById("close").addEventListener("click", function() {
+            document.getElementById("prevbox").style.display = "none";
+        });
+    </script>
+</html>
