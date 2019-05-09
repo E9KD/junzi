@@ -564,12 +564,12 @@
                         document.getElementById("headerbox").style.display =
                             "block";
                         // 曲线救国
-                        // if (
-                        //     location.href.indexOf("#reloaded") != -1 &&
-                        //     count == 0
-                        // ) {
-                        //     location.href = location.href.split("#")[0];
-                        // }
+                        if (
+                            location.href.indexOf("#reloaded") != -1 &&
+                            count == 0
+                        ) {
+                            location.href = location.href.split("#")[0];
+                        }
                     } else if (x == 0) {
                         document.getElementById("headerbox").style.display =
                             "none";
@@ -577,10 +577,10 @@
                         document.getElementById("swiper").style.display =
                             "block";
                         // 曲线救国
-                        // if (location.href.indexOf("#reloaded") == -1) {
-                        //     location.href = location.href + "#reloaded";
-                        //     location.reload();
-                        // }
+                        if (location.href.indexOf("#reloaded") == -1) {
+                            location.href = location.href + "#reloaded";
+                            location.reload();
+                        }
                     }
                     let tagArr = document.querySelectorAll(
                         ".header_list_option"
