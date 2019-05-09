@@ -14,7 +14,8 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
-    align-items: center;width: 25%;
+    align-items: center;
+    width: 25%;
 }
 .footer_item p {
     font-size: 12px;
@@ -26,7 +27,7 @@
     height: 8vw;
 }
 body {
-    background-color: #f8f3f3;
+    background-color: #f5f5f4;
 }
 section {
     display: flex;
@@ -74,6 +75,7 @@ section {
     color: #6d6d6d;
     width: 80%;
     margin: 0 auto;
+    padding: 3px 0;
 }
 .tool_price {
     display: flex;
@@ -101,7 +103,7 @@ section {
 }
 .content {
     background-color: #fff;
-    display: flex;
+    display: none;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: flex-start;

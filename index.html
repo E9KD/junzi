@@ -15,7 +15,7 @@
     <body>
         <!-- 头部 -->
         <header class="header">
-            <div class="header_title">
+            <div class="header_title" style="display: none">
                 <div class="header_title_left" id="shoppage">
                     <p>君子之家店铺</p>
                     <img
@@ -48,6 +48,15 @@
                     />
                 </div>
             </div>
+
+            <div class="header_title" style="display: flex">
+                    <div class="header_title_left" id="shoppage">
+                        <p>君子爱心商城官方展示店铺</p>
+                        
+                    </div>
+                    
+                </div>
+
             <div class="input" id="input">
                 <img src="./image/RearchWhite.png" alt="" />
                 <p>搜索</p>
@@ -422,6 +431,10 @@
         <script src="./utils.js"></script>
         <script>
             window.onload = function() {
+                alert(
+                    "本店为官方展示店铺，不进行销售，如需购买，请点击榜单——店铺销售榜，进入对应店主店铺。"
+                );
+
                 //活动挂载
                 function PartyMount() {
                     let tagArr = document.querySelectorAll(".party_item");

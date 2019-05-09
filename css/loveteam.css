@@ -63,6 +63,8 @@ header {
     background: url("../image/BottomArrow.png") 95% center no-repeat;
     background-size: 10px 10px;
     border: none;
+    -webkit-appearance: none;
+    padding-right: 15px;
 }
 .options {
     color: #0683bc;
@@ -125,5 +127,4 @@ header {
 .content_item_right {
     color: #0683bc;
     font-size: 12px;
-    
 }
