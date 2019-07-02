@@ -127,7 +127,7 @@
                     <div class="swiper-slide swiper-slide-active">
                         <img src="./image/a22.png" class="main-img" />
                         <div class="swiper_content">
-                            <p class="swiper_title">张三</p>
+                            <p class="swiper_title">1</p>
                             <p class="swiper_text">
                                 2009年8月,悦悦出生在一个工薪阶层的普通家庭。一个幼小生命的诞生,给全家带来了无限喜悦。刚出生时,悦悦特别可
                                 2009年8月,悦悦出生在一个工薪阶层的普通家庭。一个幼小生命的诞生,给全家带来了无限喜悦。刚出生时,悦悦特别可
@@ -139,7 +139,31 @@
                     <div class="swiper-slide swiper-slide-active">
                         <img src="./image/a22.png" class="main-img" />
                         <div class="swiper_content">
-                            <p class="swiper_title">张三</p>
+                            <p class="swiper_title">2</p>
+                            <p class="swiper_text">
+                                2009年8月,悦悦出生在一个工薪阶层的普通家庭。一个幼小生命的诞生,给全家带来了无限喜悦。刚出生时,悦悦特别可
+                                2009年8月,悦悦出生在一个工薪阶层的普通家庭。一个幼小生命的诞生,给全家带来了无限喜悦。刚出生时,悦悦特别可
+                                2009年8月,悦悦出生在一个工薪阶层的普通家庭。一个幼小生命的诞生,给全家带来了无限喜悦。刚出生时,悦悦特别可
+                            </p>
+                            <p class="swiper_read">45512人已阅读</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="./image/a22.png" class="main-img" />
+                        <div class="swiper_content">
+                            <p class="swiper_title">3</p>
+                            <p class="swiper_text">
+                                2009年8月,悦悦出生在一个工薪阶层的普通家庭。一个幼小生命的诞生,给全家带来了无限喜悦。刚出生时,悦悦特别可
+                                2009年8月,悦悦出生在一个工薪阶层的普通家庭。一个幼小生命的诞生,给全家带来了无限喜悦。刚出生时,悦悦特别可
+                                2009年8月,悦悦出生在一个工薪阶层的普通家庭。一个幼小生命的诞生,给全家带来了无限喜悦。刚出生时,悦悦特别可
+                            </p>
+                            <p class="swiper_read">45512人已阅读</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active">
+                        <img src="./image/a22.png" class="main-img" />
+                        <div class="swiper_content">
+                            <p class="swiper_title">4</p>
                             <p class="swiper_text">
                                 2009年8月,悦悦出生在一个工薪阶层的普通家庭。一个幼小生命的诞生,给全家带来了无限喜悦。刚出生时,悦悦特别可
                                 2009年8月,悦悦出生在一个工薪阶层的普通家庭。一个幼小生命的诞生,给全家带来了无限喜悦。刚出生时,悦悦特别可
@@ -294,8 +318,39 @@
         <script src="./utils.js"></script>
         <script>
             var mySwiper = new Swiper(".swiper-container", {
+                on: {
+                    slideChangeTransitionStart: function() {
+                       
+                        switch (this.activeIndex) {
+                            case 0:
+                                document.getElementById(
+                                    "story"
+                                ).style.background =
+                                    "linear-gradient(to bottom, #95d4f1, #cd95f1)";
+                                break;
+                            case 1:
+                                document.getElementById(
+                                    "story"
+                                ).style.background =
+                                    "linear-gradient(to bottom, #95d4f1, #0078ff)";
+                                break;
+                            case 2:
+                                document.getElementById(
+                                    "story"
+                                ).style.background =
+                                    "linear-gradient(to bottom, #95d4f1, #ffde00)";
+                                break;
+                            case 3:
+                                document.getElementById(
+                                    "story"
+                                ).style.background =
+                                    "linear-gradient(to bottom, #95d4f1, #cd95f1)";
+                                break;
+                        }
+                    }
+                },
                 autoplay: false,
-                loop: true,
+                // loop: true,
                 slidesPerView: "auto",
                 centeredSlides: true
                 // pagination: {
@@ -423,13 +478,12 @@
                         tagArr[i].classList.remove("borderbom");
                         tagSection[i].style.display = "none";
                     }
-                    if (x == 1) {
-                        document.body.style.background =
-                            "linear-gradient(to bottom, #b8e8fe , #cd95f1)";
-                    } else {
-                        document.body.style.background =
-                            "#f5f5f4";
-                    }
+                    // if (x == 1) {
+                    //     document.body.style.background =
+                    //         "linear-gradient(to bottom, #b8e8fe , #cd95f1)";
+                    // } else {
+                    //     document.body.style.background = "#f5f5f4";
+                    // }
                     tagArr[x].classList.add("borderbom");
                     tagSection[x].style.display = "flex";
                     ChangeIndexState(x);

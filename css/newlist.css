@@ -1,0 +1,136 @@
+body {
+    background-color: #fff;
+}
+
+.footer {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer_item {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+}
+.footer_item p {
+    font-size: 12px;
+    color: #6d6d6d;
+    margin-top: 3px;
+}
+.footer_item img {
+    width: 8vw;
+    height: 8vw;
+}
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #3fa3d1;
+    height: 8vh;
+    color: #ffffff;
+    font-size: 15px;
+}
+section {
+    margin-bottom: 11vh;
+    padding-top: 0.5rem;
+}
+.tabbar {
+    width: 94%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    background-color: #9f9f9f;
+}
+.tabbar p {
+    font-size: 12px;
+    color: #fff;
+    padding: 5px 10px;
+    width: 25%;
+    background-color: #9f9f9f;
+    border-radius: 15px;
+    text-align: center;
+}
+.hover {
+    color: #333 !important;
+    background-color: #f2d305 !important;
+}
+.content {
+    margin-top: 0.5rem;
+}
+.content_item {
+    width: 94%;
+    margin: 0 auto;
+}
+.item_list {
+    width: 96%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2%;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+.list_head {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.head_level {
+    height: 1.5rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+.head_number {
+    font-size: 11px;
+    color: #3fa3d1;
+    border-radius: 26px;
+    border: 1px solid #3fa3d1;
+    padding: 4px;
+    margin-right: 0.5rem;
+    height: 10px;
+    width: 10px;
+    text-align: center;
+    line-height: 10px;
+}
+.userimage {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+.username {
+    font-size: 14px;
+    color: #333;
+    font-weight: bolder;
+}
+.list_foot {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.list_foot :nth-child(1) {
+    color: #3fa3d1;
+    font-size: 12px;
+}
+.list_foot :nth-child(2) {
+    color: #333;
+    font-size: 12px;
+    background-color: #eeeeee;
+    padding: 0px 10px;
+    border-radius: 10px;
+}

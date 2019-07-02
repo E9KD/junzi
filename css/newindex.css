@@ -1,5 +1,6 @@
 body {
     background-color: #fff;
+    min-height: 74vh;
 }
 .imgwh {
     width: 15px;
@@ -114,6 +115,7 @@ section {
     margin-top: 16vh;
     margin-bottom: 11vh;
     display: none;
+    min-height: 74vh;
 }
 .section_home {
     display: flex;
@@ -261,7 +263,7 @@ section {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 }
 .item {
     display: flex;
@@ -278,7 +280,7 @@ section {
 .item :nth-child(2) {
     font-size: 12px;
     color: #333333;
-    margin-top: .2rem;
+    margin-top: 0.2rem;
 }
 .item :nth-child(3) {
     font-size: 11px;

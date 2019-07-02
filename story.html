@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=\, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/story.css" />
+    </head>
+    <body>
+        <header>
+            <div class="headerbox">
+                <img
+                    src="./image/GoBackWhite.png"
+                    alt=""
+                    id="back"
+                    class="back"
+                />
+                <p class="title">张三的故事</p>
+                
+            </div>
+        </header>
+        <section>
+            <img src="./image/a22.png" alt="" class="title_image">
+             <!-- TABBAR -->
+             <div class="tabbar">
+                    <p class="tabbar_item hover">TA的故事</p>
+                    <p class="tabbar_item">爱心留言</p>
+                </div>
+            <!-- TA的故事 -->
+            <div class="content_item" >
+               
+                <!-- HEAD -->
+                <div class="content_head">
+                    <p>助力残障儿童康复</p>
+                    <p>为自闭症、脑瘫、残疾等困难儿童，筹集康复费用。</p>
+                </div>
+                <!-- STORY -->
+                <div class="content_story">
+                    <div class="story_title">
+                        <img src="./image/flower.png" alt="">
+                        <p>TA的故事</p>
+                    </div>
+                </div>
+                <!-- SALE -->
+                <div class="content_sale">
+                    <img src="./image/a22.png" alt="">
+                    <div class="sale_info">
+                        <p class="info_title">【爱心义卖】残疾儿童DIY钻石画  残疾儿   童D    IY钻石画</p>
+                        <div class="info_price">
+                            <div class="pricebox">
+                                <p>¥</p>
+                                <p>45.00</p>
+                            </div>
+                            <p class="sale_buy">去购买</p>
+                        </div>
+                    </div>
+                </div>
+                <!--嗯 -->
+                <div class="en">
+                    <img src="./image/logo.png" alt="">
+                    <p>义卖所得将全部用于残疾人公益事业</p>
+                </div>
+            </div>
+            <!-- 爱心留言 -->
+            <div class="content_item" style="display: none">
+                <div class="love">
+                    <div class="love_title">
+                        <div class="title_head">
+                            <img src="./image/lovecase.png" alt="">
+                            <p class="head_content">爱心留言</p>
+                            <p class="head_number">(454)</p>
+                        </div>
+                        <p class="saymore">去留言</p>
+                    </div>
+                    <div class="love_content">
+                        <!-- 单体 -->
+                        <div class="item">
+                            <img src="./image/a22.png" alt="" class="userimage">
+                            <div class="userinfo">
+                                <div class="user_name">
+                                    <p class="name">小王子</p>
+                                    <p class="time">2019-06-20  08:00</p>
+                                </div>
+                                <p class="user_content">小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小  拷贝小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小  拷贝  拷贝</p>
+                            </div>
+                        </div>
+                        <!-- 单体 -->
+                        <div class="item">
+                                <img src="./image/a22.png" alt="" class="userimage">
+                                <div class="userinfo">
+                                    <div class="user_name">
+                                        <p class="name">小王子</p>
+                                        <p class="time">2019-06-20  08:00</p>
+                                    </div>
+                                    <p class="user_content">小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小  拷贝小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小  拷贝  拷贝</p>
+                                </div>
+                            </div>
+                            <!-- 单体 -->
+                        <div class="item">
+                                <img src="./image/a22.png" alt="" class="userimage">
+                                <div class="userinfo">
+                                    <div class="user_name">
+                                        <p class="name">小王子</p>
+                                        <p class="time">2019-06-20  08:00</p>
+                                    </div>
+                                    <p class="user_content">小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小  拷贝小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小王子留言小  拷贝  拷贝</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            // 切换展示
+            function TabBarChange(x) {
+                let tagArr = document.querySelectorAll(".tabbar_item");
+                let tagList = document.querySelectorAll(".content_item");
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].classList.remove("hover");
+                    tagList[i].style.display = "none";
+                }
+                tagArr[x].classList.add("hover");
+                tagList[x].style.display = "block";
+            }
+
+            // tabbar事件挂载
+            function TabBarMount() {
+                let tagArr = document.querySelectorAll(".tabbar_item");
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].addEventListener("click", function() {
+                        TabBarChange(i);
+                    });
+                }
+            }
+
+            // 执行
+            this.TabBarMount();
+        
+        </script>
+</html>

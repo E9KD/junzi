@@ -18,8 +18,17 @@
             <img src="./image/GoBack.png" alt="" class="back" id="back" />
             <img src="./image/ShareBlack.png" alt="" class="share" id="share" />
         </header>
+
+        <!-- 视频 -->
+        <video controls class="video_image" autoplay="autoplay">
+            <source
+                src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+                type="video/mp4"
+            />
+        </video>
+
         <!-- 轮播 -->
-        <div class="swiper-container">
+        <div class="swiper-container video_image" style="display: none">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <img src="./image/ProduceImage.png" alt="" />
@@ -31,8 +40,15 @@
                     <img src="./image/ProduceImage.png" alt="" />
                 </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-pagination"></div> -->
         </div>
+
+        <!-- 切换bar -->
+        <div class="bar">
+            <p class="bar_p active">视频</p>
+            <p class="bar_p ">图片</p>
+        </div>
+
         <!-- Options -->
         <div class="options">
             <div class="content_title">
@@ -268,6 +284,28 @@
             </div>
         </div>
         <script>
+            // 切换展示
+            function TabBarChange(x) {
+                let tagArr = document.querySelectorAll(".bar_p");
+                let tagList = document.querySelectorAll(".video_image");
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].classList.remove("active");
+                    tagList[i].style.display = "none";
+                }
+                tagArr[x].classList.add("active");
+                tagList[x].style.display = "block";
+            }
+
+            // tabbar事件挂载
+            function TabBarMount() {
+                let tagArr = document.querySelectorAll(".bar_p");
+                for (let i = 0; i < tagArr.length; i++) {
+                    tagArr[i].addEventListener("click", function() {
+                        TabBarChange(i);
+                    });
+                }
+            }
+
             // 增加数量
             function AddNumber() {
                 let tag = document.getElementById("number");
@@ -463,6 +501,8 @@
                 GetProduce();
                 //ChangeNumber
                 ChangeNumber();
+                // 执行
+                TabBarMount();
             }
 
             // 执行
@@ -477,6 +517,8 @@
                     stopOnLastSlide: false,
                     disableOnInteraction: true
                 },
+                observer: true,
+                observerParents: true,
                 pagination: {
                     el: ".swiper-pagination"
                 }
