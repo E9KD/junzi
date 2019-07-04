@@ -1,0 +1,82 @@
+body {
+    background-color: #fff;
+}
+.back {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 99;
+    width: 2rem;
+    height: 2rem;
+}
+.content {
+}
+.goodsinfo {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.goodsinfo img {
+    width: 100vw;
+    height: 15rem;
+}
+.goods_title {
+    font-size: 13px;
+    color: #333;
+    font-weight: bolder;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+.lovenumber {
+    padding-left: 0.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.lovenumber :nth-child(1) {
+    color: #e4010d;
+    font-size: 15px;
+}
+.lovenumber :nth-child(2) {
+    color: #e4010d;
+    font-size: 13px;
+}
+.goodsimage {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
+}
+.goodsimage img {
+    width: 100vw;
+    height: 15rem;
+}
+.goodsbtn {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding-bottom: 0.5rem;
+}
+.goodsbtn :nth-child(1) {
+    width: 94%;
+    padding: 10px 0px;
+    font-size: 14px;
+    color: #ff5001;
+    border-radius: 20px;
+    border: 1px solid #ff5001;
+    text-align: center;
+    margin: 0 auto;
+}
+.goodsbtn :nth-child(2) {
+    width: 94%;
+    padding: 10px 0px;
+    font-size: 14px;
+    color: #999999;
+    border-radius: 20px;
+    border: 1px solid #999;
+    text-align: center;
+    margin: 0 auto;
+}
