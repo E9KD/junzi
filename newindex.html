@@ -108,8 +108,8 @@
                 <div class="show_item">
                     <div class="item">
                         <img src="./image/a22.png" alt="" />
-                        <p>手工绢花 纯洁之花</p>
-                        <p>25456.5W人已购买</p>
+                        <p class="item_title">手工绢花 纯洁之花</p>
+                        <p class="item_number">25456.5W人已购买</p>
                     </div>
                     <div class="item">
                         <img src="./image/a22.png" alt="" />
@@ -320,7 +320,6 @@
             var mySwiper = new Swiper(".swiper-container", {
                 on: {
                     slideChangeTransitionStart: function() {
-                       
                         switch (this.activeIndex) {
                             case 0:
                                 document.getElementById(

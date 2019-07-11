@@ -382,11 +382,7 @@ footer {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 40vh;
-    left: 50%;
-    transform: translate(-50%, 0);
-    z-index: 999;
+    
 }
 .bar p {
     font-size: 12px;

@@ -165,7 +165,7 @@ section {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     padding: 0.3rem 0;
     width: 33%;
 }
@@ -176,9 +176,10 @@ section {
 .item_title {
     font-size: 12px;
     color: #333;
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
 }
 .item_number {
+    margin-top: 0.3rem;
     font-size: 11px;
     color: #e4010d;
 }
@@ -269,7 +270,7 @@ section {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     width: 49%;
 }
 .item img {
@@ -277,15 +278,15 @@ section {
     height: auto;
     border-radius: 10px;
 }
-.item :nth-child(2) {
-    font-size: 12px;
+/* .item_title {
+    font-size: 13px;
     color: #333333;
-    margin-top: 0.2rem;
+    margin-top: 0.5rem;
 }
-.item :nth-child(3) {
-    font-size: 11px;
+.item_number {
+    font-size: 10px;
     color: #666666;
-}
+} */
 /* 捐助 */
 .section_donate {
     background-color: #f5f5f4;
